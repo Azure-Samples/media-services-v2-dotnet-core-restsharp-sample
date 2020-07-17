@@ -1,0 +1,14 @@
+<!--
+    This file contains common targets (i.e., use for all projects)
+-->
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <!-- Remove the bin, obj and TestResults subtrees as part of the Clean target -->
+
+    <Target Name="RemoveBinAndObjTrees" AfterTargets="Clean">
+            <RemoveDir Directories="$(ProjectDir)$(BaseOutputPath)" /> <!-- bin -->
+            <RemoveDir Directories="$(ProjectDir)$(BaseIntermediateOutputPath)"/> <!-- obj -->
+            <RemoveDir Directories="$(ProjectDir)TestResults" />  <!-- TestResults -->
+    </Target>
+</Project>

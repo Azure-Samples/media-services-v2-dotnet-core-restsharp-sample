@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.AzFunction.Advanced", "Sample.AzFunction.Advanced\Sample.AzFunction.Advanced.csproj", "{C869AB04-339D-4B05-92FE-B9758425B4F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AFA1236B-A4FF-42F6-9888-4B2ABA1B8DE4}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		..\infrastructure\azure-pipelines\templates\steps\build-test-report-steps-template.yml = ..\infrastructure\azure-pipelines\templates\steps\build-test-report-steps-template.yml
+		..\infrastructure\azure-pipelines\hardac_functions_pr_master.yml = ..\infrastructure\azure-pipelines\hardac_functions_pr_master.yml
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaServicesV2.Services.EncodingTests", "MediaServicesV2.Services.EncodingTests\MediaServicesV2.Services.EncodingTests.csproj", "{76A27B42-3AFD-4B05-9293-7B997E79E204}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.AzFunction.HelloWorld", "Sample.AzFunction.HelloWorld\Sample.AzFunction.HelloWorld.csproj", "{F5EC82DF-83E9-4E8C-9448-FE2216DDD52A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaServicesV2.Library.RestSharp", "MediaServicesV2.Library.RestSharp\MediaServicesV2.Library.RestSharp.csproj", "{A2872F84-EE1C-4B3A-99D8-5AD041F47C13}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaServicesV2.Services.Encoding", "MediaServicesV2.Services.Encoding\MediaServicesV2.Services.Encoding.csproj", "{8500AF6E-6229-40C5-805A-AC168CF542CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storage.Helper", "Storage.Helper\Storage.Helper.csproj", "{9C620176-5AFF-4496-B00B-F71EC737EBE3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Console.UploadAndEncodeSprites", "Sample.Console.UploadAndEncodeSprites\Sample.Console.UploadAndEncodeSprites.csproj", "{61714857-3485-44C5-8578-38FEDC6057F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C869AB04-339D-4B05-92FE-B9758425B4F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C869AB04-339D-4B05-92FE-B9758425B4F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C869AB04-339D-4B05-92FE-B9758425B4F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C869AB04-339D-4B05-92FE-B9758425B4F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76A27B42-3AFD-4B05-9293-7B997E79E204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76A27B42-3AFD-4B05-9293-7B997E79E204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76A27B42-3AFD-4B05-9293-7B997E79E204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76A27B42-3AFD-4B05-9293-7B997E79E204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5EC82DF-83E9-4E8C-9448-FE2216DDD52A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5EC82DF-83E9-4E8C-9448-FE2216DDD52A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5EC82DF-83E9-4E8C-9448-FE2216DDD52A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5EC82DF-83E9-4E8C-9448-FE2216DDD52A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2872F84-EE1C-4B3A-99D8-5AD041F47C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2872F84-EE1C-4B3A-99D8-5AD041F47C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2872F84-EE1C-4B3A-99D8-5AD041F47C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2872F84-EE1C-4B3A-99D8-5AD041F47C13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8500AF6E-6229-40C5-805A-AC168CF542CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8500AF6E-6229-40C5-805A-AC168CF542CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8500AF6E-6229-40C5-805A-AC168CF542CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8500AF6E-6229-40C5-805A-AC168CF542CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C620176-5AFF-4496-B00B-F71EC737EBE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C620176-5AFF-4496-B00B-F71EC737EBE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C620176-5AFF-4496-B00B-F71EC737EBE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C620176-5AFF-4496-B00B-F71EC737EBE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61714857-3485-44C5-8578-38FEDC6057F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61714857-3485-44C5-8578-38FEDC6057F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61714857-3485-44C5-8578-38FEDC6057F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61714857-3485-44C5-8578-38FEDC6057F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4CCB2EC-2559-471C-8CBE-DAB3297BB750}
+	EndGlobalSection
+EndGlobal

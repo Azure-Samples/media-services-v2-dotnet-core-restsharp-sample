@@ -1,0 +1,14 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+
+    "AZURE_TENANT_ID": "<< Put your Tenant Guid here. >>",
+    "AZURE_SUBSCRIPTION_ID": "<< Put your Subscription Guid here. >>",
+
+    "AmsAccountName": "<< Put your azure media services account name here. >>",
+    "AmsLocation": "<< Put your azure media services account location here. e.g westus >>",
+    "AmsV2CallbackEndpoint": "<< Put your azure media services callback endpoint here. e.g https://my.service.com/amsv2statusendpoint or an empty sting when not using a callback endpoint.>>"
+  }
+}
