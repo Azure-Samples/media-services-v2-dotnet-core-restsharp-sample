@@ -1,4 +1,4 @@
-## [project-title] Changelog
+## AMS V2 .Net Core RestSharp Sample - Changelog
 
 <a name="x.y.z"></a>
 # x.y.z (yyyy-mm-dd)

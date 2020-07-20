@@ -14,6 +14,7 @@ description: "Azure Media Services V2 REST API example using RestSharp"
 
 Azure Media Services does not have a .NetCore SDK for their legacy (V2) API.  This project aims to provide some patterns and sample code to access the V2 REST API by using the popular RestSharp library.  It also provides yml pipelines, storage access services, demonstrates dependency injection in Azure Functions, as well as setting up RBAC for a MSI.
 
+Note : it is recommended to use AMS v3 REST API when possible. AMS v2 REST API still provides some features which are not yet in v3. [This document](https://docs.microsoft.com/en-us/azure/media-services/latest/media-services-v2-vs-v3#feature-gaps-with-respect-to-v2-apis) describes the feature gaps. You may also read the [migration document](https://docs.microsoft.com/en-us/azure/media-services/latest/migrate-from-v2-to-v3).
 
 ## About the solution
 
@@ -22,13 +23,13 @@ This sample contains a number of Azure Functions which demonstrate simple concep
 **\src\Sample.AzFunction.HelloWorld :**
 
 - GetJobById is an easy-to-read GET call to Media Services using RestSharp.
- 
+
  **\src\Sample.AzFunction.Advanced :**
- 
- - StartMediaEncoderStandardJob uses a collection of services to start and track a job with MediaServices, read in detail below.
+
+- StartMediaEncoderStandardJob uses a collection of services to start and track a job with MediaServices, read in detail below.
  \src\Sample.AzFunction.Advanced
 
- - GetStorageAccountKey and GetContentLength demonstrate typical Azure service operations needed when building media solutions.
+- GetStorageAccountKey and GetContentLength demonstrate typical Azure service operations needed when building media solutions.
 \src\Sample.AzFunction.Advanced
 
 **\src\Sample.Console.UploadAndEncodeSprites :**
@@ -39,7 +40,6 @@ This sample contains a console app that uploads a MP4 file, encodes it using the
 
 The IMediaServicesV2RestSharp is not exhaustive, it only includes those API calls needed to perform the work in this sample.  It is easy to fork and extend, see contribution guidelines and licensing files.
 
-
 ## Authentication and Authorization
 
 ### Deployed in Azure
@@ -49,11 +49,13 @@ When deployed to Azure as a Function App, with system assigned managed identity 
 This managed service principal must have appropriate role based access control to the storage accounts it needs to access via the code sample, and access to the media services resource.
 
 The following are needed to access storage:
- - Storage Blob Data Contributor
- - Reader and Data Access
+
+- Storage Blob Data Contributor
+- Reader and Data Access
 
 The following is needed for AMS:
- - Contributor on the AMS resource.
+
+- Contributor on the AMS resource.
 
 Run the script 'create_rbac_for_object_id.sh' once from a shell.azure.com instance, or a bash shell with the Azure CLI tooling, to permit the application.
 
@@ -70,6 +72,7 @@ The function and the console app uses an instance of IMediaServicesV2Encoder to 
 ## StartMediaEncoderStandardJob function call
 
 To test the StartMediaEncoderStandardJob function:
+
 - copy a mp4 file into a Azure storage account,
 - call the StartMediaEncoderStandardJob function from Curl or Postman. Please specify the path of the mp4 file in the *blobUri* parameter. 
 
@@ -84,4 +87,3 @@ In Visual Studio, select *Sample.Console.UploadAndEncodeSprites* project and run
 ![Service Interfaces](./docs/img/consoleapprun.png)
 
 ![Service Interfaces](./docs/img/consoleapprun2.png)
-
