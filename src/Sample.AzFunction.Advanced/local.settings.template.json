@@ -9,6 +9,7 @@
 
     "AmsAccountName": "<< Put your azure media services account name here. >>",
     "AmsLocation": "<< Put your azure media services account location here. e.g westus >>",
+    "AmsRestApiEndpoint": "<< Put your azure media services REST api endpoint here. >>",
     "AmsV2CallbackEndpoint": "<< Put your azure media services callback endpoint here. e.g https://my.service.com/amsv2statusendpoint or an empty sting when not using a callback endpoint.>>"
   }
 }

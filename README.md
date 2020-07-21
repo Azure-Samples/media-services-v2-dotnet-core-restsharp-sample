@@ -69,6 +69,7 @@ Add the following application settings :
 - **AZURE_SUBSCRIPTION_ID**
 - **AmsAccountName**
 - **AmsLocation**
+- **AmsRestApiEndpoint**
 - **AmsV2CallbackEndpoint**
 
 ![Functions Application Settings](./docs/img/config-functions.png)
@@ -77,30 +78,35 @@ Use "Advanced edit" mode and add :
 
 ```json
 {
-    "name": "AmsAccountName",
-    "value": "<< Put your azure media services account name here. >>",
-    "slotSetting": false
-  },
-  {
-    "name": "AmsLocation",
-    "value": "<< Put your azure media services account location here. e.g westus >>",
-    "slotSetting": false
-  },
-  {
-    "name": "AmsV2CallbackEndpoint",
-    "value": "<< Put your azure media services callback endpoint here. e.g https://my.service.com/amsv2statusendpoint or an empty sting when not using a callback endpoint.>>",
-    "slotSetting": false
-  },
-  {
-    "name": "AZURE_SUBSCRIPTION_ID",
-    "value": "<< Put your Subscription Guid here. >>",
-    "slotSetting": false
-  },
-  {
-    "name": "AZURE_TENANT_ID",
-    "value": "<< Put your Tenant Guid here. >>",
-    "slotSetting": false
-  },
+  "name": "AmsAccountName",
+  "value": "<< Put your azure media services account name here. >>",
+  "slotSetting": false
+},
+{
+  "name": "AmsLocation",
+  "value": "<< Put your azure media services account location here. e.g westus >>",
+  "slotSetting": false
+},
+{
+  "name": "AmsRestApiEndpoint",
+  "value": "<< Put your azure media services REST api endpoint here. >>",
+  "slotSetting": false
+},
+{
+  "name": "AmsV2CallbackEndpoint",
+  "value": "<< Put your azure media services callback endpoint here. e.g https://my.service.com/amsv2statusendpoint or an empty sting when not using a callback endpoint.>>",
+  "slotSetting": false
+},
+{
+  "name": "AZURE_SUBSCRIPTION_ID",
+  "value": "<< Put your Subscription Guid here. >>",
+  "slotSetting": false
+},
+{
+  "name": "AZURE_TENANT_ID",
+  "value": "<< Put your Tenant Guid here. >>",
+  "slotSetting": false
+}
 ```
 
 ### Running locally the Azure functions or the console app
@@ -111,6 +117,7 @@ From the template, create a local.settings.json file (for Azure Functions) or a 
 - **AZURE_SUBSCRIPTION_ID**
 - **AmsAccountName**
 - **AmsLocation**
+- **AmsRestApiEndpoint**
 
 These will allow for the local user to log in interactively and use their identity for Azure operations, ensure they have sufficient privilege.
 

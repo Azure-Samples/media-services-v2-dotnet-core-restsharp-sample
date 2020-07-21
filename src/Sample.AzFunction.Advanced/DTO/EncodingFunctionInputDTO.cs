@@ -18,7 +18,7 @@ namespace Sample.AzFunction.Advanced.Models
         public IEnumerable<InputItem> Inputs { get; set; }
 
         /// <summary>
-        /// Gets or sets Media Encoder Standard preset name. For example "Sprites" or "Adaptive Streaming"
+        /// Gets or sets Media Encoder Standard preset name. For example "SpriteOnlySetting" or "Adaptive Streaming"
         /// </summary>
         [JsonProperty("presetName")]
         public string PresetName { get; set; }

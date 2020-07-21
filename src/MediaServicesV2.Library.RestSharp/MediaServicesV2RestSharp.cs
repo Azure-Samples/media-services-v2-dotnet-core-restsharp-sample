@@ -46,7 +46,7 @@ namespace MediaServicesV2.Library.RestSharp
 
             var amsAccountName = configuration.GetValue<string>("AmsAccountName") ?? throw new Exception("'AmsAccountName' app setting is required.");
             var amsLocation = configuration.GetValue<string>("AmsLocation") ?? throw new Exception("'AmsLocation' app setting is required.");
-            var baseUrl = $"https://{amsAccountName}.restv2.{amsLocation}.media.azure.net/api/";
+            var baseUrl = configuration.GetValue<string>("AmsRestApiEndpoint") ?? throw new Exception("'AmsRestApiEndpoint' app setting is required.");
             _restClient = new RestClient(baseUrl);
         }
 
