@@ -1,0 +1,22 @@
+trigger: none
+pr:
+  branches:
+    include:
+      - master
+
+variables:
+  buildConfiguration: 'Release'
+  artifactName:       'Sample.AzFunction.Advanced'
+  workingDirectory:   '$(Build.SourcesDirectory)/src/$(artifactName)'
+  functionAppProjectName:  '$(artifactName).csproj'
+  packDirectory: '$(Build.ArtifactStagingDirectory)'
+  downloadDirectory: '$(Build.SourcesDirectory)/downloadDirectory'
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- template: templates/steps/build-test-report-steps-template.yml
+  parameters:
+    coverageThreshold: '1' # Set this to desired percentage to fail the build.
+    checkWarnings: true
