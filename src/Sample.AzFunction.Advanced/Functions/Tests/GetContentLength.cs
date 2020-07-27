@@ -12,12 +12,13 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Storage.Helper;
 
-namespace Sample.AzFunction.Advanced
+namespace Sample.AzFunction.Advanced.Functions.Tests
 {
     /// <summary>
     /// Most media projects involve using Azure Storage, this functions demonstrates how to create and use a BlobBaseClient.
+    /// This function also serves as a test for role based access control on storage account data.
     /// Usage:
-    ///   http://localhost:7071/api/GetContentLength?blobUri=https%3A%2F%2Fmyaccount.blob.core.windows.net%2Ftest00%2Fbbb.mp4
+    ///   http://localhost:7071/api/Tests/GetContentLength?blobUri=https%3A%2F%2Fmyaccount.blob.core.windows.net%2Ftest00%2Fbbb.mp4
     /// .
     /// </summary>
     public class GetContentLength
@@ -41,7 +42,7 @@ namespace Sample.AzFunction.Advanced
         /// <returns>Content length of blobUri, or -1.</returns>
         [FunctionName("GetContentLength")]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "Tests/GetContentLength")] HttpRequest req,
             ILogger log)
         {
             // Try to get the blobUri from the request parameters:
@@ -78,7 +79,7 @@ namespace Sample.AzFunction.Advanced
 
             log.LogInformation($"BlobUri: {blobUri}, ContentLength: {contentLength}");
 
-            return new OkObjectResult(contentLength);
+            return new OkObjectResult(new { blobUri, contentLength });
         }
     }
 }

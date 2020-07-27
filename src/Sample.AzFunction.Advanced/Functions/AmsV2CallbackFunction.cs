@@ -10,7 +10,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace Sample.AzFunction.Advanced
+namespace Sample.AzFunction.Advanced.Functions
 {
     /// <summary>
     /// AmsV2CallbackFunction get the job status from Azure Media Services V2.
@@ -40,7 +40,7 @@ namespace Sample.AzFunction.Advanced
         /// <returns>web response.</returns>
         [FunctionName("AmsV2Callback")]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)]
+            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)]
             HttpRequest req)
         {
             MediaServicesV2NotificationMessage notificationMessage;

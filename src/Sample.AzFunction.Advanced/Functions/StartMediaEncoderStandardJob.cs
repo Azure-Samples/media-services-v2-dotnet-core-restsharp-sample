@@ -10,10 +10,9 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using Sample.AzFunction.Advanced.Models;
 
-namespace Sample.AzFunction.Advanced
+namespace Sample.AzFunction.Advanced.Functions
 {
     /// <summary>
     /// Starts a MediaEncoderStandard Job using <see cref="IMediaServicesV2Encoder"/>, which uses RestSharp to call AMS V2 APIs.
@@ -40,15 +39,12 @@ namespace Sample.AzFunction.Advanced
         /// <returns>JobId.</returns>
         [FunctionName("StartMediaEncoderStandardJob")]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", "get", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
             ILogger log)
         {
             string jobId;
             try
             {
-                // TODO: Parse your arguments to build a job
-                var todo = req?.ContentLength;
-
                 string requestBody;
                 using (var sr = new StreamReader(req?.Body))
                 {
