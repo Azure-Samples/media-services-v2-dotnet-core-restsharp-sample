@@ -12,9 +12,9 @@ description: "Azure Media Services V2 REST API example using RestSharp"
 
 # Azure Media Services V2 REST API samples using RestSharp in .NetCore 3.1
 
-Azure Media Services (AMS) does not have a .NetCore SDK for their legacy (V2) API.  This project aims to provide some patterns and sample code to access the V2 REST API by using the popular RestSharp library.  It also provides yml pipelines, storage access services, demonstrates dependency injection in Azure Functions and Console app, as well as setting up RBAC for a MSI.
+Azure Media Services (AMS) does not have a .NetCore SDK for their legacy (V2) API.  This project aims to provide some patterns and sample code to access the V2 REST API by using the popular RestSharp library.  It also provides a yml build pipeline, storage access services, demonstrates dependency injection in Azure Functions and Console app, as well as setting up RBAC for a MSI.
 
-Note : it is recommended to use AMS v3 REST API when possible. AMS v2 REST API still provides some features which are not yet in v3. [This document](https://docs.microsoft.com/en-us/azure/media-services/latest/media-services-v2-vs-v3#feature-gaps-with-respect-to-v2-apis) describes the feature gaps. You may also read the [v2 to v3 migration document](https://docs.microsoft.com/en-us/azure/media-services/latest/migrate-from-v2-to-v3).
+> Note : it is recommended to use AMS v3 REST API when possible. AMS v2 REST API still provides some features which are not yet in v3. [This document](https://docs.microsoft.com/en-us/azure/media-services/latest/media-services-v2-vs-v3#feature-gaps-with-respect-to-v2-apis) describes the feature gaps. You may also read the [v2 to v3 migration document](https://docs.microsoft.com/en-us/azure/media-services/latest/migrate-from-v2-to-v3).
 
 ## About the solution
 
@@ -22,7 +22,7 @@ This sample contains a number of Azure Functions and a console app which demonst
 
 **\src\Sample.AzFunction.HelloWorld :**
 
-- Function 'GetJobById' is an easy-to-read GET call to Media Services using RestSharp.
+- Function 'GetJobById' is an easy-to-read GET call to Media Services using RestSharp. More [here](./src/Sample.AzFunction.HelloWorld/readme.md).
 
  **\src\Sample.AzFunction.Advanced :**
 
@@ -38,14 +38,16 @@ This sample contains a number of Azure Functions and a console app which demonst
 
 ## What this solution is not
 
-The IMediaServicesV2RestSharp is not exhaustive, it only includes those API calls needed to perform the work in this sample.  It is easy to fork and extend, see contribution guidelines and licensing files.
+The IMediaServicesV2RestSharp is not exhaustive, it only includes those API calls needed to perform the work in this sample.  It is easy to fork and extend, see [contribution guidelines](./CONTRIBUTING.md) and [licensing](./LICENSE.md) files.
 
 ## Authentication and Authorization
 
 ### When deployed in Azure
 
 The ServiceCollectionExtensions include both AddAzureFluentManagement and AddDefaultAzureTokenCredential to set up the auth for the project.
+
 When deployed to Azure as a Function App, with system assigned managed identity enabled, the web-host will provide the required credentials for both IAzure and TokenCredential objects; which are injected into the service container and used in the implementations.
+
 This managed service principal must have appropriate role based access control to the storage accounts it needs to access via the code sample, and access to the media services resource.
 
 The following are needed to access storage:
@@ -61,15 +63,17 @@ Run some commands from a shell.azure.com instance, or a bash shell with the Azur
 
 Follow [this detailed example on how to add these roles](./AddRoles.md).
 
+Read the [HelloWorld readme.md](./src/Sample.AzFunction.HelloWorld/readme.md) to review authentication flow.
+
 #### Azure Function application settings
 
 Add the following application settings :
 
 - **AZURE_TENANT_ID**
 - **AZURE_SUBSCRIPTION_ID**
+- **ArmManagementUrl**
 - **AmsAccountName**
-- **AmsLocation**
-- **AmsRestApiEndpoint**
+- **AmsResourceGroup**
 - **AmsV2CallbackEndpoint**
 
 ![Functions Application Settings](./docs/img/config-functions.png)
@@ -78,18 +82,18 @@ Use "Advanced edit" mode and add :
 
 ```json
 {
+  "name": "ArmManagementUrl",
+  "value": "https://management.azure.com",
+  "slotSetting": false
+},
+{
   "name": "AmsAccountName",
   "value": "<< Put your azure media services account name here. >>",
   "slotSetting": false
 },
 {
-  "name": "AmsLocation",
-  "value": "<< Put your azure media services account location here. e.g westus >>",
-  "slotSetting": false
-},
-{
-  "name": "AmsRestApiEndpoint",
-  "value": "<< Put your azure media services REST api endpoint here. >>",
+  "name": "AmsResourceGroup",
+  "value": "<< Put your azure media services account resource group name here. >>",
   "slotSetting": false
 },
 {
@@ -115,11 +119,11 @@ From the template, create a local.settings.json file (for Azure Functions) or a 
 
 - **AZURE_TENANT_ID**
 - **AZURE_SUBSCRIPTION_ID**
+- **ArmManagementUrl**
 - **AmsAccountName**
-- **AmsLocation**
-- **AmsRestApiEndpoint**
+- **AmsResourceGroup**
 
-These will allow for the local user to log in interactively and use their identity for Azure operations, ensure they have sufficient privilege.
+These will allow for the local user to log in interactively and use their identity for Azure operations, ensure [they have sufficient privilege](./AddRoles.md).
 
 ## Interfaces
 

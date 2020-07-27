@@ -18,8 +18,10 @@ The Azure Function App uses a [Startup class](Startup) and [dependency injection
 
 Auth Flow:
 
- 1. In ```ConfigureRestClient()``` the TokenCredential is used to request a bearer token with a scope of: ```https://rest.media.azure.net/.default```
- 2. That bearer token is then used for calls to the base url for AMS V2 REST API, which has the form: ```https://{amsAccountName}.restv2.{amsLocation}.media.azure.net/api/```
+ 1. In `GetAmsRestApiEndpoint()` the `Microsoft.Azure.Services.AppAuthentication` is used to request a bearer token for the resource: `https://management.azure.com`
+ 2. That bearer token is then used to get details on the Azure Media Services account, in particular the `amsRestApiEndpoint`.
+ 3. In `ConfigureRestClient()` the `Microsoft.Azure.Services.AppAuthentication` is used to request a bearer token for the resource:`https://rest.media.azure.net`
+ 4. That bearer token is then used for calls to the base url for AMS V2 REST API, `amsRestApiEndpoint`, which has the form: `https://{amsAccountName}.restv2.{location-based-instance}.media.azure.net/api/`
 
 ![AzFxnWithRestSharpUsingAmsV2](./docs/img/AzFxnWithRestSharpUsingAmsV2.drawio.svg)
 

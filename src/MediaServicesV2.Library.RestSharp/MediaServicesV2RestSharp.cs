@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Azure.Core;
 using MediaServicesV2.Library.RestSharp.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -24,30 +23,32 @@ namespace MediaServicesV2.Library.RestSharp
     /// </summary>
     public class MediaServicesV2RestSharp : IMediaServicesV2RestSharp
     {
+        private const string AmsRestApiResource = "https://rest.media.azure.net";
         private readonly ILogger<MediaServicesV2RestSharp> _log;
-        private readonly TokenCredential _tokenCredential;
-        private readonly IRestClient _restClient;
+
+        private readonly string _armAmsAccoutGetPath;
+        private readonly string _armManagementUrl;
         private readonly object configLock = new object();
         private bool isConfigured = false;
+
+        private IRestClient _restClient;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaServicesV2RestSharp"/> class.
         /// </summary>
-        /// <param name="log">log.</param>
-        /// <param name="tokenCredential">TokenCredential.</param>
-        /// <param name="configuration">Configuration.</param>
+        /// <param name="log">The injected <see cref="ILogger"/>.</param>
+        /// <param name="configuration">The injected <see cref="IConfiguration"/>.</param>
         public MediaServicesV2RestSharp(
             ILogger<MediaServicesV2RestSharp> log,
-            TokenCredential tokenCredential,
             IConfiguration configuration)
         {
             _log = log ?? throw new ArgumentNullException(nameof(log));
-            _tokenCredential = tokenCredential;
 
+            var azureSubscriptionId = configuration.GetValue<string>("AZURE_SUBSCRIPTION_ID") ?? throw new Exception("'AZURE_SUBSCRIPTION_ID' app setting is required.");
+            _armManagementUrl = configuration.GetValue<string>("ArmManagementUrl") ?? throw new Exception("'ArmManagementUrl' app setting is required.");
             var amsAccountName = configuration.GetValue<string>("AmsAccountName") ?? throw new Exception("'AmsAccountName' app setting is required.");
-            var amsLocation = configuration.GetValue<string>("AmsLocation") ?? throw new Exception("'AmsLocation' app setting is required.");
-            var baseUrl = configuration.GetValue<string>("AmsRestApiEndpoint") ?? throw new Exception("'AmsRestApiEndpoint' app setting is required.");
-            _restClient = new RestClient(baseUrl);
+            var amsResourceGroup = configuration.GetValue<string>("AmsResourceGroup") ?? throw new Exception("'AmsResourceGroup' app setting is required.");
+            _armAmsAccoutGetPath = $"/subscriptions/{azureSubscriptionId}/resourceGroups/{amsResourceGroup}/providers/microsoft.media/mediaservices/{amsAccountName}?api-version=2015-10-01";
         }
 
         /// <inheritdoc/>
@@ -152,9 +153,9 @@ namespace MediaServicesV2.Library.RestSharp
 
             // Note:
             //  CreateFileInfos asks Azure Media Services to enumerate files in the asset container and add them as AssetFiles,
-            //  without auto-selecting a primary file.  A primary file is needed for encodes that need to diambiguate which file
+            //  without auto-selecting a primary file.  A primary file is needed for encodes that need to disambiguate which file
             //  should be used as the master timeline, or primary video track, etc.  This code base is not expected to need
-            //  primary files, so does not attempt to itterate over the created AssetFiles to then set one as Primary.
+            //  primary files, so does not attempt to iterate over the created AssetFiles to then set one as Primary.
             //  Should this be needed in the future, the following operations should be considered:
             //  new RestRequest($"Assets('{assetId}')/Files", Method.GET);
             //  foreach(var assetFile in restResponse.Data["d"]["results"].ToList())
@@ -238,7 +239,7 @@ namespace MediaServicesV2.Library.RestSharp
         {
             // https://docs.microsoft.com/en-us/rest/api/media/operations/job
 
-            // https://<accountname>.restv2.<location>.media.azure.net/api/Jobs('jobid')
+            // https://<accountname>.restv2.<location-based-instance>.media.azure.net/api/Jobs('jobid')
 
             ConfigureRestClient();
             var request = new RestRequest($"Jobs('{jobId}')", Method.GET);
@@ -347,7 +348,7 @@ namespace MediaServicesV2.Library.RestSharp
             var request = new RestRequest($"Assets('{assetId}')/Files", Method.GET);
             var restResponse = await _restClient.ExecuteAsync<JObject>(request, cancellationToken: default).ConfigureAwait(false);
 
-            // e.g.: {"d":{"results":[{"__metadata":{"id":"https://yourams.restv2.westus.media.azure.net/api/Files('nb%3Acid%3AUUID%3A08091296-b368-4444-9ce9-878798ef482e')","uri":"https://yourams.restv2.westus.media.azure.net/api/Files('nb%3Acid%3AUUID%3A08091296-b368-4444-9ce9-878798ef482e')","type":"Microsoft.Cloud.Media.Vod.Rest.Data.Models.AssetFile"},"Id":"nb:cid:UUID:08091296-b368-4444-9ce9-878798ef482e","Name":"Unikitty_Clip_small.mov","ContentFileSize":"122992491","ParentAssetId":"nb:cid:UUID:3682f1d9-05f5-442a-832b-afe25cfec903","EncryptionVersion":null,"EncryptionScheme":null,"IsEncrypted":false,"EncryptionKeyId":null,"InitializationVector":null,"IsPrimary":false,"LastModified":"\/Date(1587097903363)\/","Created":"\/Date(1587097903363)\/","MimeType":null,"ContentChecksum":null,"Options":0}]}}
+            // e.g.: {"d":{"results":[{"__metadata":{"id":"https://yourams.restv2.westus.media.azure.net/api/Files('nb%3Acid%3AUUID%3A08091296-b368-4444-9ce9-878798ef482e')","uri":"https://yourams.restv2.westus.media.azure.net/api/Files('nb%3Acid%3AUUID%3A08091296-b368-4444-9ce9-878798ef482e')","type":"Microsoft.Cloud.Media.Vod.Rest.Data.Models.AssetFile"},"Id":"nb:cid:UUID:08091296-b368-4444-9ce9-878798ef482e","Name":"bbb.mov","ContentFileSize":"122992491","ParentAssetId":"nb:cid:UUID:3682f1d9-05f5-442a-832b-afe25cfec903","EncryptionVersion":null,"EncryptionScheme":null,"IsEncrypted":false,"EncryptionKeyId":null,"InitializationVector":null,"IsPrimary":false,"LastModified":"\/Date(1587097903363)\/","Created":"\/Date(1587097903363)\/","MimeType":null,"ContentChecksum":null,"Options":0}]}}
             if (!restResponse.IsSuccessful)
             {
                 string expMsg = CreateExceptionMessage(restResponse);
@@ -421,6 +422,57 @@ namespace MediaServicesV2.Library.RestSharp
             }
         }
 
+        /// <inheritdoc/>
+        public string GetAmsRestApiEndpoint()
+        {
+            string amsRestApiEndpoint;
+            try
+            {
+                // Create a rest client for access the Azure Resource Management API Endpoint:
+                var restManagementClient = new RestClient(_armManagementUrl);
+
+                // Acquire a token for arm.
+                // Ref: https://docs.microsoft.com/en-us/azure/app-service/overview-managed-identity?tabs=dotnet#asal
+                var azureServiceTokenProvider = new Microsoft.Azure.Services.AppAuthentication.AzureServiceTokenProvider();
+                string armAccessToken = azureServiceTokenProvider.GetAccessTokenAsync(_armManagementUrl).Result;
+
+                // Add the bearer authentication token to all requests:
+                restManagementClient.Authenticator = new JwtAuthenticator(armAccessToken);
+
+                // Enforce a known serializer:
+                restManagementClient.UseNewtonsoftJson(
+                    new Newtonsoft.Json.JsonSerializerSettings()
+                    {
+                        ContractResolver = new DefaultContractResolver(),
+                    });
+
+                // Add default headers
+                restManagementClient.AddDefaultHeader("Accept", $"{ContentType.Json};odata=verbose");
+                restManagementClient.AddDefaultHeader("Content-Type", ContentType.Json);
+
+                // GET ams account details:
+                var request = new RestRequest(_armAmsAccoutGetPath, Method.GET);
+                var restResponse = restManagementClient.Execute<JObject>(request);
+                if (!restResponse.IsSuccessful)
+                {
+                    string expMsg = "Failed to get ams account details.";
+                    throw new Exception(expMsg);
+                }
+
+                // Parse endpoint information from arm response.
+                amsRestApiEndpoint = (string)restResponse.Data.SelectToken("properties.apiEndpoints[0].endpoint");
+            }
+            catch (Exception e)
+            {
+                // Just log, let the caller catch the original exception:
+                _log.LogError(e, $"Failed in {nameof(GetAmsRestApiEndpoint)}.\nException.Message:\n{e.Message}\nInnerException.Message:\n{e.InnerException?.Message}");
+                throw;
+            }
+
+            return amsRestApiEndpoint;
+        }
+
+
         private string CreateExceptionMessage(IRestResponse<JObject> restResponse)
         {
             var responseHeaders = restResponse.Headers?.Select(h => new JProperty(h.Name, (string)h.Value));
@@ -441,7 +493,8 @@ namespace MediaServicesV2.Library.RestSharp
         }
 
         /// <summary>
-        /// Configures the RestSharp RestClient.
+        /// This should be called before any call to <see cref="IRestClient"/>,
+        /// it sets up the auth token and default headers per the AMS V2 API specification.
         /// </summary>
         private void ConfigureRestClient()
         {
@@ -454,13 +507,15 @@ namespace MediaServicesV2.Library.RestSharp
                     {
                         try
                         {
-                            var amsAccessToken = _tokenCredential.GetToken(
-                                new TokenRequestContext(
-                                    scopes: new[] { "https://rest.media.azure.net/.default" },
-                                    parentRequestId: null),
-                                default);
+                            string amsRestApiEndpoint = GetAmsRestApiEndpoint();
+                            _restClient = new RestClient(amsRestApiEndpoint);
 
-                            _restClient.Authenticator = new JwtAuthenticator(amsAccessToken.Token);
+                            // Acquire a token for AMS.
+                            // Ref: https://docs.microsoft.com/en-us/azure/app-service/overview-managed-identity?tabs=dotnet#asal
+                            var azureServiceTokenProvider = new Microsoft.Azure.Services.AppAuthentication.AzureServiceTokenProvider();
+                            string amsAccessToken = azureServiceTokenProvider.GetAccessTokenAsync(AmsRestApiResource).Result;
+
+                            _restClient.Authenticator = new JwtAuthenticator(amsAccessToken);
 
                             _restClient.UseNewtonsoftJson(
                                 new Newtonsoft.Json.JsonSerializerSettings()
@@ -477,7 +532,7 @@ namespace MediaServicesV2.Library.RestSharp
                         catch (Exception e)
                         {
                             exceptionInLock = e;
-                            _log.LogError(e, $"Failed to {nameof(ConfigureRestClient)}");
+                            _log.LogError(e, $"Failed in {nameof(ConfigureRestClient)}.\nException.Message:\n{e.Message}\nInnerException.Message:\n{e.InnerException?.Message}");
                         }
                         finally
                         {
