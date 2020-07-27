@@ -10,6 +10,7 @@
     <Rule Id="CA1034" Action="None"/>  <!-- Complain about nesting public classes (we use them for test data). -->
     <Rule Id="CA1062" Action="None"/>  <!-- Complain about not checking for null parameters -->
     <Rule Id="CA1707" Action="None"/>  <!-- Allow Underscores in names -->
+    <Rule Id="CA1820" Action="None"/>  <!-- Test for empty strings using string length -->
     <Rule Id="CA2000" Action="None"/>  <!-- Call System.IDisposable.Dispose on object created by '...'' before all references to it are out of scope. -->
   </Rules>
   <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
