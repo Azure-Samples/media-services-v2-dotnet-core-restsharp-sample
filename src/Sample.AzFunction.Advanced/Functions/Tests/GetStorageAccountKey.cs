@@ -9,13 +9,14 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Storage.Helper;
 
-namespace Sample.AzFunction.Advanced
+namespace Sample.AzFunction.Advanced.Functions.Tests
 {
     /// <summary>
     /// In many projects, Azure resources need to be managed.
     /// This function uses the IAzureStorageManagement service to get data.
+    /// This function also serves as a test for role based access control on storage account keys.
     /// Usage:
-    ///   http://localhost:7071/api/GetStorageAccountKeyLength?name=myaccount
+    ///   http://localhost:7071/api/Tests/GetStorageAccountKeyLength?name=myaccount
     /// .
     /// </summary>
     public class GetStorageAccountKey
@@ -39,7 +40,7 @@ namespace Sample.AzFunction.Advanced
         /// <returns>Key length of the storage account name, or -1.</returns>
         [FunctionName("GetStorageAccountKeyLength")]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "Tests/GetStorageAccountKeyLength")] HttpRequest req,
             ILogger log)
         {
             // Try to get the name from the request parameters:
@@ -80,9 +81,9 @@ namespace Sample.AzFunction.Advanced
             }
 
             // Do something, like build a SAS url, but don't actually output a storage key!
-            var outputMsg = $"StorageKey.Length for {name} is: {storageKey.Length}";
-            log.LogInformation(outputMsg);
-            return new OkObjectResult(outputMsg);
+            var keyLength = storageKey.Length;
+            log.LogInformation($"name: {name}, keyLength: {keyLength}");
+            return new OkObjectResult(new { name, keyLength });
         }
     }
 }

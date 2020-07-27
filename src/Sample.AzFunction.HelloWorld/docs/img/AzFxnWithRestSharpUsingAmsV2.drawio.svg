@@ -1,112 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="822px" height="227px" viewBox="-0.5 -0.5 822 227" content="&lt;mxfile host=&quot;&quot; modified=&quot;2020-06-26T17:50:18.717Z&quot; agent=&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.46.1 Chrome/78.0.3904.130 Electron/7.3.1 Safari/537.36&quot; etag=&quot;03YNXj2ooz-CwkvQ0lLn&quot; version=&quot;13.1.3&quot;&gt;&lt;diagram id=&quot;6hGFLwfOUW9BJ-s0fimq&quot; name=&quot;Page-1&quot;&gt;7Vnbbts4EP0ao8lDDN1tP8Zx0m3RFEXTxe4+BbREy+xSpEpRjt2v71CiJOuWehMpSIAFAkcacjgz5wxnSHtiX0X79wLF21seYDqxjGA/sVcTy3Jmc/hUgkMumJtOLggFCXKRWQnuyE+shYaWpiTASW2i5JxKEteFPmcM+7ImQ0Lwh/q0Dad1qzEKcUtw5yPalv5FArnVUVizSv4HJuG2sGx6i3wkQsVkHUmyRQF/OBLZ1xP7SnAu86dof4Wpwq7AJde76RktHROYyZMUtB87RFMdnHZMHopoURLnIG7IHoPecisjCq8mPMacMJmh6S4n7gokiJKQgcAHD7AAAYkyNJcbzqSm0rQq+YpEIfhHyRo+o8RHGP7fpMyXhLNkmuxCmKudxELifW+kZokf5B3mEZbiAFMeKoZcHe32iBzH03mhcyIsNSvYlGc5cj0omi0UzRaMOIAc0q9cyC0POUP0upIuBU9ZoBBeGfBWzfnEeazx/o6lPGgUUSp5nY3cpjL0OEjgF0+FX8yy9RZCIsTFNLcbTIEpkmRXX78LOq36ReUHTNGslQzojW95Rn2J3Aet1SCgdOM0TqwWJ+3UfgFOAHlx+BteLoypMZ8Vkn/UilMXsNeC1V7byN8Ox29fsCAQutpOmXBAnp1ReDa9Os+mOx7P9qusYLeIwWBw/yGAVYgkeIhSVvTPOrhFBTsqdPa8XeiaFDyp0DkdYHsULCwDsquB7v1IVRNb+pxyAPFSJVW4Psv2JXgCpozG87l6UQAZa+T/G2Y776KhbhulRu2x0lUkXWxQROghVwNXUBRng7btZB6xhFOAoTlQrtehkgoCuWAZDD/060Wc8SRGsOFq3iRZzihfTCfel2OUMHxRMJSNLtRoARw8hfp/BjAszDoRfl0RNwibe+Vc062eIZPO26HukCiihUzMA35bIHSQlyuxdRIfxfFGw+vmuEasVW1Ly+0ieY0S/KegpyKTodA5sxesI/cgGB8vTHXhaFPjVMKtlOrucKkqIfzNnkxU3fbCD/xNR1qgKLn0AX4mP6MID2OrN87ZaipwInfW9CXi+sR9pI7u4wcV4YCgKfqZCjxlcKCxblBMMgKPZj/mA4izrlWX/t/IRm5kfQC/roAHCmqoJl/fFq4HO9D7jw30OUW0b8ML/COF2nKq0WcX877Ac3JHCNzB/mJttA1+hai/Phr82Rh96iNfJ2fvRq/j3/n6QzB6BX9XPx10G7saKXNvMVzl+2KcDmTk/fW3Hgvnv+1Dp0kHuelSvFGrPemeq5rw/R0WO+IPecc150brVus4I91q3Td8qy0darTGMhObnbFU6GqMTa2xDgJj7OjE5zFO+gqJ0n7p1pPvs6bZ2XMB6O8U3dcZdfrvOC1PA7xBKZWnnJcbEaxeazm69NW3lvcrIsAuF4fhCpLtdH+j+ZufF55QnxRj5Q9A+Tei1a9o9vUv&lt;/diagram&gt;&lt;/mxfile&gt;">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1525px" height="517px" viewBox="-0.5 -0.5 1525 517" content="&lt;mxfile host=&quot;c58a8d48-9a16-46ff-a222-b77ff4ac8791&quot; modified=&quot;2020-07-26T18:38:33.310Z&quot; agent=&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.47.2 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36&quot; etag=&quot;2aCiv8Eg0uzs72w9urg4&quot; version=&quot;13.1.3&quot;&gt;&lt;diagram id=&quot;6hGFLwfOUW9BJ-s0fimq&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;">
     <defs/>
     <g>
         <image x="-0.5" y="-0.5" width="50" height="46" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NC4wMjciIGhlaWdodD0iNTkiPjxwYXRoIGQ9Ik02My42MTMgMjkuOWMuNi0uNi41LTEuNyAwLTIuM2wtMy4xLTMuMS0xMy44LTEzLjRjLS42LS42LTEuNS0uNi0yLjIgMC0uNi42LS44IDEuNyAwIDIuM2wxNC41IDE0LjJjLjYuNi42IDEuNyAwIDIuM2wtMTQuOCAxNC43Yy0uNi42LS42IDEuNyAwIDIuM3MxLjcuNSAyLjIgMGwxMy44LTEzLjcgMy40LTMuM3ptLTYzLjIgMGMtLjYtLjYtLjUtMS43IDAtMi4zbDMuMS0zLjEgMTMuOC0xMy40Yy42LS42IDEuNS0uNiAyLjIgMCAuNi42LjggMS43IDAgMi4zbC0xNC4yIDE0LjJjLS42LjYtLjYgMS43IDAgMi4zbDE0LjUgMTQuN2MuNi42LjYgMS43IDAgMi4zcy0xLjcuNS0yLjIgMGwtMTQuMS0xMy41LTMuMS0zLjV6IiBmaWxsPSIjMzk5OWM2Ii8+PHBhdGggZD0iTTMwLjQxMyAyOS43bC0xMCAyOS4zIDI3LjYtMzkuMWgtMTMuNGwxMy0xOS45aC0xOS41bC0xMC41IDI5LjZ6IiBmaWxsPSIjZmNkMTE2Ii8+PHBhdGggZD0iTTI2LjYxMyAyNC42bDEyLjguMS0xOSAzNC4zIDI3LjYtMzkuMWgtMTMuNGwxMy0xOS45aC0xMC4yeiIgb3BhY2l0eT0iLjMiIGZpbGw9IiNmZjhjMDAiLz48L3N2Zz4="/>
-        <path d="M 59 96 L 59 143.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 59 148.88 L 55.5 141.88 L 59 143.63 L 62.5 141.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 65 370 L 65 433.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 65 438.88 L 61.5 431.88 L 65 433.63 L 68.5 431.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 123px; margin-left: 59px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 405px; margin-left: 65px;">
                         <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                             <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
-                                1
+                                3
                             </div>
                         </div>
                     </div>
                 </foreignObject>
-                <text x="59" y="126" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle">
-                    1
+                <text x="65" y="408" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    3
                 </text>
             </switch>
         </g>
-        <path d="M 78 71 L 129 71 L 129 25.7 L 169.8 25.66" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 175.05 25.65 L 168.06 29.16 L 169.8 25.66 L 168.05 22.16 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 84 345 L 120 345 L 120 345.7 L 145.8 345.66" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 151.05 345.65 L 144.06 349.16 L 145.8 345.66 L 144.05 342.16 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 50px; margin-left: 129px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 345px; margin-left: 118px;">
                         <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                             <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
-                                2
+                                4
                             </div>
                         </div>
                     </div>
                 </foreignObject>
-                <text x="129" y="53" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle">
-                    2
+                <text x="118" y="348" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    4
                 </text>
             </switch>
         </g>
-        <image x="39.5" y="45.5" width="38" height="50" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3Ni4wMzIiIGhlaWdodD0iMTAwIj48cGF0aCBkPSJNMjguMjg0IDgxLjg1YTUuMDcgNS4wNyAwIDAgMSAwLTcuMTcyTDM5LjQxMiA2My41NVY1My42bDE2LjQzMy0xNi40MzRhMTAuODMgMTAuODMgMCAwIDAgMC0xNS4zMTRsLTE4LjY4LTE4LjY4YTEwLjgzMSAxMC44MzEgMCAwIDAtMTUuMzE2IDBMMy4xNzIgMjEuODUyYTEwLjgyOCAxMC44MjggMCAwIDAgMCAxNS4zMTRMMjAuOTA4IDU0Ljl2MS41bC01LjA1IDUuMDUgNS4wMDUgNS4wMDUtNS4wMDUgNSA1LjAwNSA1LjAwNS01LjAwNSA1IDUuMDUgNS4wNXYuMDYzbDguNiA4LjYgNi4wNS02LjA1ek0yMy4zNiAxMy44MzRhNi4xNDcgNi4xNDcgMCAxIDEgNi4xNDcgNi4xNDcgNi4xNDggNi4xNDggMCAwIDEtNi4xNDctNi4xNDd6IiBmaWxsPSIjZmNkMTE2Ii8+PHBhdGggZD0iTTEyLjM2NCAyNS45MmgzNS40ODJ2NS4xSDEyLjM2NHptMCA4LjI5N2gzNS40ODJ2NS4xSDEyLjM2NHoiIG9wYWNpdHk9Ii41IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTU0LjMgMTAwYTMuOTc4IDMuOTc4IDAgMCAxLTIuODM1LTEuMTc1TDMzLjczNSA4MS4xYTQuMDA4IDQuMDA4IDAgMCAxIDAtNS42N0w1MS40NiA1Ny43YTQuMDA1IDQuMDA1IDAgMCAxIDUuNjcgMGwxNy43MjQgMTcuNzNhNC4wMDYgNC4wMDYgMCAwIDEgMCA1LjY3Mkw1Ny4xMyA5OC44MjVBMy45NzggMy45NzggMCAwIDEgNTQuMyAxMDAiIGZpbGw9IiM1OWI0ZDkiLz48ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJNNjYuMTMyIDc0Ljg2N2EzLjM5MyAzLjM5MyAwIDAgMC0yLjgzOSA1LjI2Mkw1Ni41NiA4Ni44NmEzLjk5MSAzLjk5MSAwIDAgMC0uNTctLjMyNFY2OS4zNmEzLjQgMy40IDAgMSAwLTMuMzg4IDB2MTcuMTc2YTMuOTI5IDMuOTI5IDAgMCAwLS41NS4zMDdsLTYuNzQtNi43NGEzLjQ5MyAzLjQ5MyAwIDEgMC0xLjc0NCAxLjM2MWw3LjA4NSA3LjA4NmEzLjk1NyAzLjk1NyAwIDEgMCA3LjI5Mi4wMjhsNy4xMDYtNy4xMDVhMy4zNTYgMy4zNTYgMCAwIDAgMS4wNzkuMTkxIDMuNCAzLjQgMCAwIDAgMC02Ljh6Ii8+PHBhdGggZD0iTTUzLjQ4NCA2Ny4wOTJsMS41NS0xLjU1MiAxMi43MTQgMTIuNy0xLjU1MiAxLjU1eiIgb3BhY2l0eT0iLjUiLz48cGF0aCBkPSJNNDAuODYgNzguMjYyTDUzLjU3IDY1LjU1bDEuNTUyIDEuNTVMNDIuNCA3OS44MTN6IiBvcGFjaXR5PSIuNSIvPjwvZz48cGF0aCBkPSJNNTYuNjEyIDkwLjFhMi4zNTYgMi4zNTYgMCAxIDEtMi4zNTYtMi4zNTUgMi4zNTUgMi4zNTUgMCAwIDEgMi4zNTYgMi4zNTVtLS40MjctMjMuNjdhMS44OSAxLjg5IDAgMSAxLTEuODktMS44OSAxLjg4OSAxLjg4OSAwIDAgMSAxLjg5IDEuODlNNDQuMzUyIDc4LjI2NWExLjg5IDEuODkgMCAxIDEtMS44OS0xLjg5IDEuODkxIDEuODkxIDAgMCAxIDEuODkgMS44OW0yMy42NyAwYTEuODkxIDEuODkxIDAgMSAxLTEuODkxLTEuODkgMS44OTEgMS44OTEgMCAwIDEgMS44OTEgMS44OSIgZmlsbD0iI2I4ZDQzMiIvPjxwYXRoIGQ9Ik01Ny4xMyA1Ny43YTQgNCAwIDAgMC01LjY2OSAwTDMzLjczNSA3NS40M2E0LjAwOCA0LjAwOCAwIDAgMCAwIDUuNjdMNDMuNzcgOTEuMTM1bDE4Ljg4LTI3LjkxM3oiIG9wYWNpdHk9Ii4xIiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTM0Ljc4OCA2OC4xMzd2LTEyLjkybC0zLjg2NCAxLjkwM1Y3MnoiIG9wYWNpdHk9Ii40IiBmaWxsPSIjZmY4YzAwIi8+PC9zdmc+"/>
-        <image x="179.5" y="-0.5" width="44" height="50" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0My4zMDEiIGhlaWdodD0iNTAiPjxwYXRoIGQ9Ik0yMS42NSAwTDQzLjMgMTIuNXYyNUwyMS42NSA1MCAwIDM3LjV2LTI1eiIgZmlsbD0iIzNlM2UzZSIvPjxnIGZpbGw9IiNmZmYiPjxwYXRoIGQ9Ik0yMS42NSA1MEw0My4zIDM3LjV2LTI1UzI1LjQxMyAyNi4xMiAyMS42NSA1MCIgb3BhY2l0eT0iLjIiLz48cGF0aCBkPSJNMzEuMTcyIDE0Ljk1OGExNC4yMyAxNC4yMyAwIDAgMC0yMC4wNzQgMCAxNC4yIDE0LjIgMCAwIDAgMCAyMC4wODQgMTQuMjMgMTQuMjMgMCAwIDAgMjAuMDc0IDAgMTQuMjEgMTQuMjEgMCAwIDAgMC0yMC4wODQiLz48L2c+PHBhdGggZD0iTTI5LjIyNyAxNi45MDNhMTEuNDcgMTEuNDcgMCAwIDAtMTYuMTg1IDAgMTEuNDUgMTEuNDUgMCAwIDAgMCAxNi4xOTIgMTEuNDcgMTEuNDcgMCAwIDAgMTYuMTg1IDBjNC40Ny00LjQ3IDQuNDctMTEuNzE1IDAtMTYuMTkyIiBmaWxsPSIjNTliNGQ5Ii8+PGcgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTI3Ljk4NiAyNS4wMTVsLjA0My0uMDMtMTAuOTAyLTcuMTd2Ny4yeiIvPjxwYXRoIGQ9Ik0yNy45ODYgMjUuMDE1aC0xMC44NnY3LjE5OHoiIG9wYWNpdHk9Ii44Ii8+PC9nPjwvc3ZnPg=="/>
+        <image x="45.5" y="319.5" width="38" height="50" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3Ni4wMzIiIGhlaWdodD0iMTAwIj48cGF0aCBkPSJNMjguMjg0IDgxLjg1YTUuMDcgNS4wNyAwIDAgMSAwLTcuMTcyTDM5LjQxMiA2My41NVY1My42bDE2LjQzMy0xNi40MzRhMTAuODMgMTAuODMgMCAwIDAgMC0xNS4zMTRsLTE4LjY4LTE4LjY4YTEwLjgzMSAxMC44MzEgMCAwIDAtMTUuMzE2IDBMMy4xNzIgMjEuODUyYTEwLjgyOCAxMC44MjggMCAwIDAgMCAxNS4zMTRMMjAuOTA4IDU0Ljl2MS41bC01LjA1IDUuMDUgNS4wMDUgNS4wMDUtNS4wMDUgNSA1LjAwNSA1LjAwNS01LjAwNSA1IDUuMDUgNS4wNXYuMDYzbDguNiA4LjYgNi4wNS02LjA1ek0yMy4zNiAxMy44MzRhNi4xNDcgNi4xNDcgMCAxIDEgNi4xNDcgNi4xNDcgNi4xNDggNi4xNDggMCAwIDEtNi4xNDctNi4xNDd6IiBmaWxsPSIjZmNkMTE2Ii8+PHBhdGggZD0iTTEyLjM2NCAyNS45MmgzNS40ODJ2NS4xSDEyLjM2NHptMCA4LjI5N2gzNS40ODJ2NS4xSDEyLjM2NHoiIG9wYWNpdHk9Ii41IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTU0LjMgMTAwYTMuOTc4IDMuOTc4IDAgMCAxLTIuODM1LTEuMTc1TDMzLjczNSA4MS4xYTQuMDA4IDQuMDA4IDAgMCAxIDAtNS42N0w1MS40NiA1Ny43YTQuMDA1IDQuMDA1IDAgMCAxIDUuNjcgMGwxNy43MjQgMTcuNzNhNC4wMDYgNC4wMDYgMCAwIDEgMCA1LjY3Mkw1Ny4xMyA5OC44MjVBMy45NzggMy45NzggMCAwIDEgNTQuMyAxMDAiIGZpbGw9IiM1OWI0ZDkiLz48ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJNNjYuMTMyIDc0Ljg2N2EzLjM5MyAzLjM5MyAwIDAgMC0yLjgzOSA1LjI2Mkw1Ni41NiA4Ni44NmEzLjk5MSAzLjk5MSAwIDAgMC0uNTctLjMyNFY2OS4zNmEzLjQgMy40IDAgMSAwLTMuMzg4IDB2MTcuMTc2YTMuOTI5IDMuOTI5IDAgMCAwLS41NS4zMDdsLTYuNzQtNi43NGEzLjQ5MyAzLjQ5MyAwIDEgMC0xLjc0NCAxLjM2MWw3LjA4NSA3LjA4NmEzLjk1NyAzLjk1NyAwIDEgMCA3LjI5Mi4wMjhsNy4xMDYtNy4xMDVhMy4zNTYgMy4zNTYgMCAwIDAgMS4wNzkuMTkxIDMuNCAzLjQgMCAwIDAgMC02Ljh6Ii8+PHBhdGggZD0iTTUzLjQ4NCA2Ny4wOTJsMS41NS0xLjU1MiAxMi43MTQgMTIuNy0xLjU1MiAxLjU1eiIgb3BhY2l0eT0iLjUiLz48cGF0aCBkPSJNNDAuODYgNzguMjYyTDUzLjU3IDY1LjU1bDEuNTUyIDEuNTVMNDIuNCA3OS44MTN6IiBvcGFjaXR5PSIuNSIvPjwvZz48cGF0aCBkPSJNNTYuNjEyIDkwLjFhMi4zNTYgMi4zNTYgMCAxIDEtMi4zNTYtMi4zNTUgMi4zNTUgMi4zNTUgMCAwIDEgMi4zNTYgMi4zNTVtLS40MjctMjMuNjdhMS44OSAxLjg5IDAgMSAxLTEuODktMS44OSAxLjg4OSAxLjg4OSAwIDAgMSAxLjg5IDEuODlNNDQuMzUyIDc4LjI2NWExLjg5IDEuODkgMCAxIDEtMS44OS0xLjg5IDEuODkxIDEuODkxIDAgMCAxIDEuODkgMS44OW0yMy42NyAwYTEuODkxIDEuODkxIDAgMSAxLTEuODkxLTEuODkgMS44OTEgMS44OTEgMCAwIDEgMS44OTEgMS44OSIgZmlsbD0iI2I4ZDQzMiIvPjxwYXRoIGQ9Ik01Ny4xMyA1Ny43YTQgNCAwIDAgMC01LjY2OSAwTDMzLjczNSA3NS40M2E0LjAwOCA0LjAwOCAwIDAgMCAwIDUuNjdMNDMuNzcgOTEuMTM1bDE4Ljg4LTI3LjkxM3oiIG9wYWNpdHk9Ii4xIiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTM0Ljc4OCA2OC4xMzd2LTEyLjkybC0zLjg2NCAxLjkwM1Y3MnoiIG9wYWNpdHk9Ii40IiBmaWxsPSIjZmY4YzAwIi8+PC9zdmc+"/>
+        <image x="155.5" y="319.5" width="44" height="50" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0My4zMDEiIGhlaWdodD0iNTAiPjxwYXRoIGQ9Ik0yMS42NSAwTDQzLjMgMTIuNXYyNUwyMS42NSA1MCAwIDM3LjV2LTI1eiIgZmlsbD0iIzNlM2UzZSIvPjxnIGZpbGw9IiNmZmYiPjxwYXRoIGQ9Ik0yMS42NSA1MEw0My4zIDM3LjV2LTI1UzI1LjQxMyAyNi4xMiAyMS42NSA1MCIgb3BhY2l0eT0iLjIiLz48cGF0aCBkPSJNMzEuMTcyIDE0Ljk1OGExNC4yMyAxNC4yMyAwIDAgMC0yMC4wNzQgMCAxNC4yIDE0LjIgMCAwIDAgMCAyMC4wODQgMTQuMjMgMTQuMjMgMCAwIDAgMjAuMDc0IDAgMTQuMjEgMTQuMjEgMCAwIDAgMC0yMC4wODQiLz48L2c+PHBhdGggZD0iTTI5LjIyNyAxNi45MDNhMTEuNDcgMTEuNDcgMCAwIDAtMTYuMTg1IDAgMTEuNDUgMTEuNDUgMCAwIDAgMCAxNi4xOTIgMTEuNDcgMTEuNDcgMCAwIDAgMTYuMTg1IDBjNC40Ny00LjQ3IDQuNDctMTEuNzE1IDAtMTYuMTkyIiBmaWxsPSIjNTliNGQ5Ii8+PGcgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTI3Ljk4NiAyNS4wMTVsLjA0My0uMDMtMTAuOTAyLTcuMTd2Ny4yeiIvPjxwYXRoIGQ9Ik0yNy45ODYgMjUuMDE1aC0xMC44NnY3LjE5OHoiIG9wYWNpdHk9Ii44Ii8+PC9nPjwvc3ZnPg=="/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 57px; margin-left: 182px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 377px; margin-left: 158px;">
                         <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: white; white-space: nowrap; ">
                                 <div style="color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &quot;consolas&quot; , &quot;courier new&quot; , monospace ; font-size: 14px ; line-height: 19px">
-                                    <span style="font-family: &quot;consolas&quot; , &quot;courier new&quot; , monospace ; color: rgb(86 , 156 , 214)">
-                                        var
-                                    </span>
-                                    <span style="font-family: &quot;consolas&quot; , &quot;courier new&quot; , monospace">
-                                    </span>
-                                    <span style="font-family: &quot;consolas&quot; , &quot;courier new&quot; , monospace ; color: rgb(156 , 220 , 254)">
-                                        baseUrl 
-                                    </span>
-                                    = 
-                                    <span style="color: #ce9178">
-                                        $"https://{
-                                    </span>
-                                    <span style="color: #9cdcfe">
-                                        amsAccountName
-                                    </span>
-                                    <span style="color: #ce9178">
-                                        }.restv2.{
-                                    </span>
-                                    <span style="color: #9cdcfe">
-                                        amsLocation
-                                    </span>
-                                    <span style="color: #ce9178">
-                                        }.media.azure.net/api/"
-                                    </span>
-                                </div>
-                                <div style="color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &quot;consolas&quot; , &quot;courier new&quot; , monospace ; font-size: 14px ; line-height: 19px">
-                                    <div style="font-family: &quot;consolas&quot; , &quot;courier new&quot; , monospace ; line-height: 19px">
+                                    <div style="color: rgb(248 , 248 , 242) ; background-color: rgb(39 , 40 , 34) ; font-family: &quot;consolas&quot; , &quot;courier new&quot; , monospace ; line-height: 19px">
+                                        _restClient 
+                                        <span style="color: #f92672">
+                                            =
+                                        </span>
+                                        <span style="color: #f92672">
+                                            new
+                                        </span>
+                                        <span style="color: #66d9ef ; font-style: italic">
+                                            RestClient
+                                        </span>
+                                        (amsRestApiEndpoint);
+                                    </div>
+                                    <div style="color: rgb(248 , 248 , 242) ; background-color: rgb(39 , 40 , 34) ; font-family: &quot;consolas&quot; , &quot;courier new&quot; , monospace ; line-height: 19px">
                                         <div style="line-height: 19px">
-                                            <span style="color: #569cd6">
+                                            <span style="color: #f92672">
                                                 var
                                             </span>
-                                            <span style="color: #9cdcfe">
-                                                request
+                                             request 
+                                            <span style="color: #f92672">
+                                                =
                                             </span>
-                                             = 
-                                            <span style="color: #569cd6">
+                                            <span style="color: #f92672">
                                                 new
                                             </span>
-                                            <span style="color: #4ec9b0">
+                                            <span style="color: #66d9ef ; font-style: italic">
                                                 RestRequest
                                             </span>
                                             (
-                                            <span style="color: #ce9178">
+                                            <span style="color: #e6db74">
                                                 $"Jobs('{
                                             </span>
-                                            <span style="color: #9cdcfe">
-                                                jobId
-                                            </span>
-                                            <span style="color: #ce9178">
+                                            jobId
+                                            <span style="color: #e6db74">
                                                 }')"
                                             </span>
-                                            , 
-                                            <span style="color: #9cdcfe">
-                                                Method
-                                            </span>
-                                            .
-                                            <span style="color: #9cdcfe">
-                                                GET
-                                            </span>
-                                            );
+                                            , Method.GET);
                                         </div>
                                     </div>
                                 </div>
@@ -114,29 +91,25 @@
                         </div>
                     </div>
                 </foreignObject>
-                <text x="182" y="69" fill="#000000" font-family="Helvetica" font-size="12px">
-                    var bas...
+                <text x="158" y="389" fill="#000000" font-family="Helvetica" font-size="12px">
+                    _restCl...
                 </text>
             </switch>
         </g>
-        <image x="33.5" y="149.5" width="50" height="50" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+PHBhdGggZmlsbD0iIzU5YjRkOSIgZD0iTTI1IDUwYy0xLjIzMiAwLTIuMzkyLS40OC0zLjI2LTEuMzUyTDEuMzUgMjguMjZhNC42NCA0LjY0IDAgMCAxIDAtNi41MjFMMjEuNzQgMS4zNTJhNC41OCA0LjU4IDAgMCAxIDYuNTIyIDBMNDguNjQ4IDIxLjc0QzQ5LjUyIDIyLjYwOCA1MCAyMy43NjcgNTAgMjVzLS40OCAyLjM5Mi0xLjM1MyAzLjI2M0wyOC4yNjIgNDguNjVhNC41OCA0LjU4IDAgMCAxLTMuMjYxIDEuMzUyIi8+PGcgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTM4LjYxNCAyMS4wOTNhMy45MSAzLjkxIDAgMCAwLTMuOTEgMy45MDkgMy44OCAzLjg4IDAgMCAwIC42NDUgMi4xNDNsLTcuNzQ0IDcuNzQ0YTQuNTUgNC41NSAwIDAgMC0uNjU2LS4zNzNWMTQuNzZjMS4xNjctLjY3NiAxLjk2LTEuOTI0IDEuOTYtMy4zN0EzLjkxIDMuOTEgMCAwIDAgMjUgNy40OGEzLjkxIDMuOTEgMCAwIDAtMy45MDggMy45MDljMCAxLjQ0Ni43OTQgMi42OTQgMS45NiAzLjM3djE5Ljc1NmE0LjQ4IDQuNDggMCAwIDAtLjYzMi4zNTNsLTcuNzUzLTcuNzUzYTMuODggMy44OCAwIDAgMCAuNjI4LTIuMTEzIDMuOTEgMy45MSAwIDAgMC0zLjkwOC0zLjkwOSAzLjkxIDMuOTEgMCAwIDAtMy45MSAzLjkwOSAzLjkxIDMuOTEgMCAwIDAgMy45MSAzLjkwOSAzLjg4IDMuODggMCAwIDAgMS4yNzQtLjIzbDguMTUgOC4xNWMtLjIzNC41NDgtLjM2NCAxLjE1LS4zNjQgMS43ODMgMCAyLjUxMyAyLjAzOCA0LjU1IDQuNTUgNC41NWE0LjU1IDQuNTUgMCAwIDAgNC41NTEtNC41NTFjMC0uNjItLjEyNi0xLjIxMi0uMzUtMS43NWw4LjE3My04LjE3MmMuMzkyLjEzMi44MDQuMjIgMS4yNC4yMmEzLjkxIDMuOTEgMCAwIDAgMy45MDgtMy45MDkgMy45MSAzLjkxIDAgMCAwLTMuOTA2LTMuOTA5eiIvPjxwYXRoIG9wYWNpdHk9Ii41IiBkPSJNNDAuNDcgMjQuOTgzbC0xLjc4NCAxLjc4NEwyNC4wNjUgMTIuMTVsMS43ODQtMS43ODR6Ii8+PHBhdGggb3BhY2l0eT0iLjUiIGQ9Ik0yNC4xNjYgMTAuMzc3bDEuNzg1IDEuNzg1LTE0LjYyIDE0LjYyLTEuNzg1LTEuNzg1eiIvPjwvZz48cGF0aCBkPSJNMjcuNjY1IDM4LjYxNGEyLjcxIDIuNzEgMCAwIDEtMi43MSAyLjcwOSAyLjcxIDIuNzEgMCAwIDEtMi43MDktMi43MDkgMi43MSAyLjcxIDAgMCAxIDIuNzA5LTIuNzA5IDIuNzEgMi43MSAwIDAgMSAyLjcxIDIuNzA5bS0uNDktMjcuMjI0YzAgMS4yLS45NzMgMi4xNzQtMi4xNzQgMi4xNzRzLTIuMTc0LS45NzMtMi4xNzQtMi4xNzRTMjMuOCA5LjIxNSAyNSA5LjIxNXMyLjE3NC45NzMgMi4xNzQgMi4xNzRNMTMuNTYzIDI1YzAgMS4yLS45NzUgMi4xNzQtMi4xNzQgMi4xNzRTOS4yMTUgMjYuMjAyIDkuMjE1IDI1cy45NzMtMi4xNzQgMi4xNzQtMi4xNzQgMi4xNzQuOTczIDIuMTc0IDIuMTc0bTI3LjIyNSAwYzAgMS4yLS45NzUgMi4xNzQtMi4xNzUgMi4xNzRTMzYuNDQgMjYuMjAyIDM2LjQ0IDI1cy45NzQtMi4xNzQgMi4xNzQtMi4xNzRTNDAuNzkgMjMuOCA0MC43OSAyNSIgZmlsbD0iI2I4ZDQzMiIvPjxwYXRoIG9wYWNpdHk9Ii4xIiBmaWxsPSIjZmZmIiBkPSJNMjguMjYyIDEuMzUyQTQuNTggNC41OCAwIDAgMCAyNS4wMDEgMGMtMS4yMyAwLTIuMzkuNDgtMy4yNiAxLjM1MkwxLjM1MiAyMS43NEMuNDkyIDIyLjU5OCAwIDIzLjc4NiAwIDI1cy40OTIgMi40MDMgMS4zNTIgMy4yNmwxMS41NDMgMTEuNTQ0TDM0LjYgNy43bC02LjM0OC02LjM0N3oiLz48L3N2Zz4="/>
+        <image x="39.5" y="439.5" width="50" height="50" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+PHBhdGggZmlsbD0iIzU5YjRkOSIgZD0iTTI1IDUwYy0xLjIzMiAwLTIuMzkyLS40OC0zLjI2LTEuMzUyTDEuMzUgMjguMjZhNC42NCA0LjY0IDAgMCAxIDAtNi41MjFMMjEuNzQgMS4zNTJhNC41OCA0LjU4IDAgMCAxIDYuNTIyIDBMNDguNjQ4IDIxLjc0QzQ5LjUyIDIyLjYwOCA1MCAyMy43NjcgNTAgMjVzLS40OCAyLjM5Mi0xLjM1MyAzLjI2M0wyOC4yNjIgNDguNjVhNC41OCA0LjU4IDAgMCAxLTMuMjYxIDEuMzUyIi8+PGcgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTM4LjYxNCAyMS4wOTNhMy45MSAzLjkxIDAgMCAwLTMuOTEgMy45MDkgMy44OCAzLjg4IDAgMCAwIC42NDUgMi4xNDNsLTcuNzQ0IDcuNzQ0YTQuNTUgNC41NSAwIDAgMC0uNjU2LS4zNzNWMTQuNzZjMS4xNjctLjY3NiAxLjk2LTEuOTI0IDEuOTYtMy4zN0EzLjkxIDMuOTEgMCAwIDAgMjUgNy40OGEzLjkxIDMuOTEgMCAwIDAtMy45MDggMy45MDljMCAxLjQ0Ni43OTQgMi42OTQgMS45NiAzLjM3djE5Ljc1NmE0LjQ4IDQuNDggMCAwIDAtLjYzMi4zNTNsLTcuNzUzLTcuNzUzYTMuODggMy44OCAwIDAgMCAuNjI4LTIuMTEzIDMuOTEgMy45MSAwIDAgMC0zLjkwOC0zLjkwOSAzLjkxIDMuOTEgMCAwIDAtMy45MSAzLjkwOSAzLjkxIDMuOTEgMCAwIDAgMy45MSAzLjkwOSAzLjg4IDMuODggMCAwIDAgMS4yNzQtLjIzbDguMTUgOC4xNWMtLjIzNC41NDgtLjM2NCAxLjE1LS4zNjQgMS43ODMgMCAyLjUxMyAyLjAzOCA0LjU1IDQuNTUgNC41NWE0LjU1IDQuNTUgMCAwIDAgNC41NTEtNC41NTFjMC0uNjItLjEyNi0xLjIxMi0uMzUtMS43NWw4LjE3My04LjE3MmMuMzkyLjEzMi44MDQuMjIgMS4yNC4yMmEzLjkxIDMuOTEgMCAwIDAgMy45MDgtMy45MDkgMy45MSAzLjkxIDAgMCAwLTMuOTA2LTMuOTA5eiIvPjxwYXRoIG9wYWNpdHk9Ii41IiBkPSJNNDAuNDcgMjQuOTgzbC0xLjc4NCAxLjc4NEwyNC4wNjUgMTIuMTVsMS43ODQtMS43ODR6Ii8+PHBhdGggb3BhY2l0eT0iLjUiIGQ9Ik0yNC4xNjYgMTAuMzc3bDEuNzg1IDEuNzg1LTE0LjYyIDE0LjYyLTEuNzg1LTEuNzg1eiIvPjwvZz48cGF0aCBkPSJNMjcuNjY1IDM4LjYxNGEyLjcxIDIuNzEgMCAwIDEtMi43MSAyLjcwOSAyLjcxIDIuNzEgMCAwIDEtMi43MDktMi43MDkgMi43MSAyLjcxIDAgMCAxIDIuNzA5LTIuNzA5IDIuNzEgMi43MSAwIDAgMSAyLjcxIDIuNzA5bS0uNDktMjcuMjI0YzAgMS4yLS45NzMgMi4xNzQtMi4xNzQgMi4xNzRzLTIuMTc0LS45NzMtMi4xNzQtMi4xNzRTMjMuOCA5LjIxNSAyNSA5LjIxNXMyLjE3NC45NzMgMi4xNzQgMi4xNzRNMTMuNTYzIDI1YzAgMS4yLS45NzUgMi4xNzQtMi4xNzQgMi4xNzRTOS4yMTUgMjYuMjAyIDkuMjE1IDI1cy45NzMtMi4xNzQgMi4xNzQtMi4xNzQgMi4xNzQuOTczIDIuMTc0IDIuMTc0bTI3LjIyNSAwYzAgMS4yLS45NzUgMi4xNzQtMi4xNzUgMi4xNzRTMzYuNDQgMjYuMjAyIDM2LjQ0IDI1cy45NzQtMi4xNzQgMi4xNzQtMi4xNzRTNDAuNzkgMjMuOCA0MC43OSAyNSIgZmlsbD0iI2I4ZDQzMiIvPjxwYXRoIG9wYWNpdHk9Ii4xIiBmaWxsPSIjZmZmIiBkPSJNMjguMjYyIDEuMzUyQTQuNTggNC41OCAwIDAgMCAyNS4wMDEgMGMtMS4yMyAwLTIuMzkuNDgtMy4yNiAxLjM1MkwxLjM1MiAyMS43NEMuNDkyIDIyLjU5OCAwIDIzLjc4NiAwIDI1cy40OTIgMi40MDMgMS4zNTIgMy4yNmwxMS41NDMgMTEuNTQ0TDM0LjYgNy43bC02LjM0OC02LjM0N3oiLz48L3N2Zz4="/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 207px; margin-left: 36px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 497px; margin-left: 42px;">
                         <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: white; white-space: nowrap; ">
                                 <div style="color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &quot;consolas&quot; , &quot;courier new&quot; , monospace ; font-size: 14px ; line-height: 19px">
                                     <span style="color: #9cdcfe">
-                                        scopes
+                                        resource
                                     </span>
-                                    : 
-                                    <span style="color: #569cd6">
-                                        new
-                                    </span>
-                                    [] { 
+                                    : { 
                                     <span style="color: #ce9178">
-                                        "https://rest.media.azure.net/.default"
+                                        "https://rest.media.azure.net"
                                     </span>
                                      }
                                 </div>
@@ -144,8 +117,168 @@
                         </div>
                     </div>
                 </foreignObject>
-                <text x="36" y="219" fill="#000000" font-family="Helvetica" font-size="12px">
-                    scopes:...
+                <text x="42" y="509" fill="#000000" font-family="Helvetica" font-size="12px">
+                    resourc...
+                </text>
+            </switch>
+        </g>
+        <image x="159.5" y="79.5" width="50" height="50" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iLTQ1NCAyNTYgNDAgNDAiIGZpbGw9IiNiOGQ0MzIiPjxwYXRoIGQ9Ik0tNDU0IDI1NmgxMnYxMmgtMTJ6bTE0IDBoMTJ2MTJoLTEyem0xNCAwaDEydjEyaC0xMnptLTI4IDE0aDEydjEyaC0xMnptMTQgMGgxMnYxMmgtMTJ6bTE0IDBoMTJ2MTJoLTEyem0tMjggMTRoMTJ2MTJoLTEyem0xNCAwaDEydjEyaC0xMnptMTQgMGgxMnYxMmgtMTJ6Ii8+PC9zdmc+"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 137px; margin-left: 162px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: white; white-space: nowrap; ">
+                                <div style="color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &quot;consolas&quot; , &quot;courier new&quot; , monospace ; font-size: 14px ; line-height: 19px">
+                                    <div style="color: rgb(248 , 248 , 242) ; background-color: rgb(39 , 40 , 34) ; font-family: &quot;consolas&quot; , &quot;courier new&quot; , monospace ; line-height: 19px">
+                                        <div style="font-family: &quot;consolas&quot; , &quot;courier new&quot; , monospace ; line-height: 19px">
+                                            _armAmsAccoutGetPath 
+                                            <span style="color: #f92672">
+                                                =
+                                            </span>
+                                            <span style="color: #e6db74">
+                                                $"/subscriptions/{
+                                            </span>
+                                            azureSubscriptionId
+                                            <span style="color: #e6db74">
+                                                }/resourceGroups/{
+                                            </span>
+                                            amsResourceGroup
+                                            <span style="color: #e6db74">
+                                                }/providers/microsoft.media/mediaservices/{
+                                            </span>
+                                            amsAccountName
+                                            <span style="color: #e6db74">
+                                                }?api-version=2015-10-01"
+                                            </span>
+                                            ;
+                                        </div>
+                                    </div>
+                                    <div style="color: rgb(248 , 248 , 242) ; background-color: rgb(39 , 40 , 34) ; font-family: &quot;consolas&quot; , &quot;courier new&quot; , monospace ; line-height: 19px">
+                                        <span style="color: #f92672">
+                                            var
+                                        </span>
+                                         restManagementClient 
+                                        <span style="color: #f92672">
+                                            =
+                                        </span>
+                                        <span style="color: #f92672">
+                                            new
+                                        </span>
+                                        <span style="color: #66d9ef ; font-style: italic">
+                                            RestClient
+                                        </span>
+                                        (_armManagementUrl);
+                                    </div>
+                                    <div style="color: rgb(248 , 248 , 242) ; background-color: rgb(39 , 40 , 34) ; font-family: &quot;consolas&quot; , &quot;courier new&quot; , monospace ; line-height: 19px">
+                                        <div style="line-height: 19px">
+                                            <span style="color: #f92672">
+                                                var
+                                            </span>
+                                             request 
+                                            <span style="color: #f92672">
+                                                =
+                                            </span>
+                                            <span style="color: #f92672">
+                                                new
+                                            </span>
+                                            <span style="color: #66d9ef ; font-style: italic">
+                                                RestRequest
+                                            </span>
+                                            (_armAmsAccoutGetPath, Method.GET);
+                                        </div>
+                                        <div style="line-height: 19px">
+                                            <div style="font-family: &quot;consolas&quot; , &quot;courier new&quot; , monospace ; line-height: 19px">
+                                                amsRestApiEndpoint 
+                                                <span style="color: #f92672">
+                                                    =
+                                                </span>
+                                                 (
+                                                <span style="color: #f92672">
+                                                    string
+                                                </span>
+                                                )restResponse.Data.
+                                                <span style="color: #a6e22e">
+                                                    SelectToken
+                                                </span>
+                                                (
+                                                <span style="color: #e6db74">
+                                                    "properties.apiEndpoints[0].endpoint"
+                                                </span>
+                                                );
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="162" y="149" fill="#000000" font-family="Helvetica" font-size="12px">
+                    _armAmsA...
+                </text>
+            </switch>
+        </g>
+        <path d="M 65 130 L 65 193.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 65 198.88 L 61.5 191.88 L 65 193.63 L 68.5 191.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 165px; margin-left: 65px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                1
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="65" y="168" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    1
+                </text>
+            </switch>
+        </g>
+        <path d="M 84 105 L 153.63 105" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 158.88 105 L 151.88 108.5 L 153.63 105 L 151.88 101.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 105px; margin-left: 122px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                2
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="122" y="108" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle">
+                    2
+                </text>
+            </switch>
+        </g>
+        <image x="45.5" y="79.5" width="38" height="50" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3Ni4wMzIiIGhlaWdodD0iMTAwIj48cGF0aCBkPSJNMjguMjg0IDgxLjg1YTUuMDcgNS4wNyAwIDAgMSAwLTcuMTcyTDM5LjQxMiA2My41NVY1My42bDE2LjQzMy0xNi40MzRhMTAuODMgMTAuODMgMCAwIDAgMC0xNS4zMTRsLTE4LjY4LTE4LjY4YTEwLjgzMSAxMC44MzEgMCAwIDAtMTUuMzE2IDBMMy4xNzIgMjEuODUyYTEwLjgyOCAxMC44MjggMCAwIDAgMCAxNS4zMTRMMjAuOTA4IDU0Ljl2MS41bC01LjA1IDUuMDUgNS4wMDUgNS4wMDUtNS4wMDUgNSA1LjAwNSA1LjAwNS01LjAwNSA1IDUuMDUgNS4wNXYuMDYzbDguNiA4LjYgNi4wNS02LjA1ek0yMy4zNiAxMy44MzRhNi4xNDcgNi4xNDcgMCAxIDEgNi4xNDcgNi4xNDcgNi4xNDggNi4xNDggMCAwIDEtNi4xNDctNi4xNDd6IiBmaWxsPSIjZmNkMTE2Ii8+PHBhdGggZD0iTTEyLjM2NCAyNS45MmgzNS40ODJ2NS4xSDEyLjM2NHptMCA4LjI5N2gzNS40ODJ2NS4xSDEyLjM2NHoiIG9wYWNpdHk9Ii41IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTU0LjMgMTAwYTMuOTc4IDMuOTc4IDAgMCAxLTIuODM1LTEuMTc1TDMzLjczNSA4MS4xYTQuMDA4IDQuMDA4IDAgMCAxIDAtNS42N0w1MS40NiA1Ny43YTQuMDA1IDQuMDA1IDAgMCAxIDUuNjcgMGwxNy43MjQgMTcuNzNhNC4wMDYgNC4wMDYgMCAwIDEgMCA1LjY3Mkw1Ny4xMyA5OC44MjVBMy45NzggMy45NzggMCAwIDEgNTQuMyAxMDAiIGZpbGw9IiM1OWI0ZDkiLz48ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJNNjYuMTMyIDc0Ljg2N2EzLjM5MyAzLjM5MyAwIDAgMC0yLjgzOSA1LjI2Mkw1Ni41NiA4Ni44NmEzLjk5MSAzLjk5MSAwIDAgMC0uNTctLjMyNFY2OS4zNmEzLjQgMy40IDAgMSAwLTMuMzg4IDB2MTcuMTc2YTMuOTI5IDMuOTI5IDAgMCAwLS41NS4zMDdsLTYuNzQtNi43NGEzLjQ5MyAzLjQ5MyAwIDEgMC0xLjc0NCAxLjM2MWw3LjA4NSA3LjA4NmEzLjk1NyAzLjk1NyAwIDEgMCA3LjI5Mi4wMjhsNy4xMDYtNy4xMDVhMy4zNTYgMy4zNTYgMCAwIDAgMS4wNzkuMTkxIDMuNCAzLjQgMCAwIDAgMC02Ljh6Ii8+PHBhdGggZD0iTTUzLjQ4NCA2Ny4wOTJsMS41NS0xLjU1MiAxMi43MTQgMTIuNy0xLjU1MiAxLjU1eiIgb3BhY2l0eT0iLjUiLz48cGF0aCBkPSJNNDAuODYgNzguMjYyTDUzLjU3IDY1LjU1bDEuNTUyIDEuNTVMNDIuNCA3OS44MTN6IiBvcGFjaXR5PSIuNSIvPjwvZz48cGF0aCBkPSJNNTYuNjEyIDkwLjFhMi4zNTYgMi4zNTYgMCAxIDEtMi4zNTYtMi4zNTUgMi4zNTUgMi4zNTUgMCAwIDEgMi4zNTYgMi4zNTVtLS40MjctMjMuNjdhMS44OSAxLjg5IDAgMSAxLTEuODktMS44OSAxLjg4OSAxLjg4OSAwIDAgMSAxLjg5IDEuODlNNDQuMzUyIDc4LjI2NWExLjg5IDEuODkgMCAxIDEtMS44OS0xLjg5IDEuODkxIDEuODkxIDAgMCAxIDEuODkgMS44OW0yMy42NyAwYTEuODkxIDEuODkxIDAgMSAxLTEuODkxLTEuODkgMS44OTEgMS44OTEgMCAwIDEgMS44OTEgMS44OSIgZmlsbD0iI2I4ZDQzMiIvPjxwYXRoIGQ9Ik01Ny4xMyA1Ny43YTQgNCAwIDAgMC01LjY2OSAwTDMzLjczNSA3NS40M2E0LjAwOCA0LjAwOCAwIDAgMCAwIDUuNjdMNDMuNzcgOTEuMTM1bDE4Ljg4LTI3LjkxM3oiIG9wYWNpdHk9Ii4xIiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTM0Ljc4OCA2OC4xMzd2LTEyLjkybC0zLjg2NCAxLjkwM1Y3MnoiIG9wYWNpdHk9Ii40IiBmaWxsPSIjZmY4YzAwIi8+PC9zdmc+"/>
+        <image x="39.5" y="199.5" width="50" height="50" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+PHBhdGggZmlsbD0iIzU5YjRkOSIgZD0iTTI1IDUwYy0xLjIzMiAwLTIuMzkyLS40OC0zLjI2LTEuMzUyTDEuMzUgMjguMjZhNC42NCA0LjY0IDAgMCAxIDAtNi41MjFMMjEuNzQgMS4zNTJhNC41OCA0LjU4IDAgMCAxIDYuNTIyIDBMNDguNjQ4IDIxLjc0QzQ5LjUyIDIyLjYwOCA1MCAyMy43NjcgNTAgMjVzLS40OCAyLjM5Mi0xLjM1MyAzLjI2M0wyOC4yNjIgNDguNjVhNC41OCA0LjU4IDAgMCAxLTMuMjYxIDEuMzUyIi8+PGcgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTM4LjYxNCAyMS4wOTNhMy45MSAzLjkxIDAgMCAwLTMuOTEgMy45MDkgMy44OCAzLjg4IDAgMCAwIC42NDUgMi4xNDNsLTcuNzQ0IDcuNzQ0YTQuNTUgNC41NSAwIDAgMC0uNjU2LS4zNzNWMTQuNzZjMS4xNjctLjY3NiAxLjk2LTEuOTI0IDEuOTYtMy4zN0EzLjkxIDMuOTEgMCAwIDAgMjUgNy40OGEzLjkxIDMuOTEgMCAwIDAtMy45MDggMy45MDljMCAxLjQ0Ni43OTQgMi42OTQgMS45NiAzLjM3djE5Ljc1NmE0LjQ4IDQuNDggMCAwIDAtLjYzMi4zNTNsLTcuNzUzLTcuNzUzYTMuODggMy44OCAwIDAgMCAuNjI4LTIuMTEzIDMuOTEgMy45MSAwIDAgMC0zLjkwOC0zLjkwOSAzLjkxIDMuOTEgMCAwIDAtMy45MSAzLjkwOSAzLjkxIDMuOTEgMCAwIDAgMy45MSAzLjkwOSAzLjg4IDMuODggMCAwIDAgMS4yNzQtLjIzbDguMTUgOC4xNWMtLjIzNC41NDgtLjM2NCAxLjE1LS4zNjQgMS43ODMgMCAyLjUxMyAyLjAzOCA0LjU1IDQuNTUgNC41NWE0LjU1IDQuNTUgMCAwIDAgNC41NTEtNC41NTFjMC0uNjItLjEyNi0xLjIxMi0uMzUtMS43NWw4LjE3My04LjE3MmMuMzkyLjEzMi44MDQuMjIgMS4yNC4yMmEzLjkxIDMuOTEgMCAwIDAgMy45MDgtMy45MDkgMy45MSAzLjkxIDAgMCAwLTMuOTA2LTMuOTA5eiIvPjxwYXRoIG9wYWNpdHk9Ii41IiBkPSJNNDAuNDcgMjQuOTgzbC0xLjc4NCAxLjc4NEwyNC4wNjUgMTIuMTVsMS43ODQtMS43ODR6Ii8+PHBhdGggb3BhY2l0eT0iLjUiIGQ9Ik0yNC4xNjYgMTAuMzc3bDEuNzg1IDEuNzg1LTE0LjYyIDE0LjYyLTEuNzg1LTEuNzg1eiIvPjwvZz48cGF0aCBkPSJNMjcuNjY1IDM4LjYxNGEyLjcxIDIuNzEgMCAwIDEtMi43MSAyLjcwOSAyLjcxIDIuNzEgMCAwIDEtMi43MDktMi43MDkgMi43MSAyLjcxIDAgMCAxIDIuNzA5LTIuNzA5IDIuNzEgMi43MSAwIDAgMSAyLjcxIDIuNzA5bS0uNDktMjcuMjI0YzAgMS4yLS45NzMgMi4xNzQtMi4xNzQgMi4xNzRzLTIuMTc0LS45NzMtMi4xNzQtMi4xNzRTMjMuOCA5LjIxNSAyNSA5LjIxNXMyLjE3NC45NzMgMi4xNzQgMi4xNzRNMTMuNTYzIDI1YzAgMS4yLS45NzUgMi4xNzQtMi4xNzQgMi4xNzRTOS4yMTUgMjYuMjAyIDkuMjE1IDI1cy45NzMtMi4xNzQgMi4xNzQtMi4xNzQgMi4xNzQuOTczIDIuMTc0IDIuMTc0bTI3LjIyNSAwYzAgMS4yLS45NzUgMi4xNzQtMi4xNzUgMi4xNzRTMzYuNDQgMjYuMjAyIDM2LjQ0IDI1cy45NzQtMi4xNzQgMi4xNzQtMi4xNzRTNDAuNzkgMjMuOCA0MC43OSAyNSIgZmlsbD0iI2I4ZDQzMiIvPjxwYXRoIG9wYWNpdHk9Ii4xIiBmaWxsPSIjZmZmIiBkPSJNMjguMjYyIDEuMzUyQTQuNTggNC41OCAwIDAgMCAyNS4wMDEgMGMtMS4yMyAwLTIuMzkuNDgtMy4yNiAxLjM1MkwxLjM1MiAyMS43NEMuNDkyIDIyLjU5OCAwIDIzLjc4NiAwIDI1cy40OTIgMi40MDMgMS4zNTIgMy4yNmwxMS41NDMgMTEuNTQ0TDM0LjYgNy43bC02LjM0OC02LjM0N3oiLz48L3N2Zz4="/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 257px; margin-left: 42px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: white; white-space: nowrap; ">
+                                <div style="color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &quot;consolas&quot; , &quot;courier new&quot; , monospace ; font-size: 14px ; line-height: 19px">
+                                    <span style="color: #9cdcfe">
+                                        resource
+                                    </span>
+                                    : { 
+                                    <span style="color: #ce9178">
+                                        "https://management.azure.com"
+                                    </span>
+                                     }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="42" y="269" fill="#000000" font-family="Helvetica" font-size="12px">
+                    resourc...
                 </text>
             </switch>
         </g>

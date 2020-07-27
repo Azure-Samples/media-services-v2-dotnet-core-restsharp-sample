@@ -1,13 +1,28 @@
-## AMS V2 .Net Core RestSharp Sample - Changelog
+# AMS V2 .Net Core RestSharp Sample - Changelog
 
-<a name="x.y.z"></a>
-# 1.0.0 (2020-07-22)
+## 1.1.0 (2020-07-27)
 
-*Features*
+Features
+
+* Uses a GET to Azure Resource Manager prior to AMS calls, to get the AmsRestApiEndpoint.
+* Code analysis nugget package updates
+
+## 1.0.0 (2020-07-22)
+
+Features
+
 * First public version released
 
-*Bug Fixes*
+## Template 1.0.0 (2020-07-22)
+
+Features
+
+* First public version released
+
+Bug Fixes
+
 * ...
 
-*Breaking Changes*
+Breaking Changes
+
 * ...

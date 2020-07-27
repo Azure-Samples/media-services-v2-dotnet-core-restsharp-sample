@@ -6,9 +6,8 @@
 
     "AZURE_TENANT_ID": "<< Put your Tenant Guid here. >>",
     "AZURE_SUBSCRIPTION_ID": "<< Put your Subscription Guid here. >>",
-
+    "ArmManagementUrl": "https://management.azure.com",
     "AmsAccountName": "<< Put your azure media services account name here. >>",
-    "AmsLocation": "<< Put your azure media services account location here. e.g westus >>",
-    "AmsRestApiEndpoint": "<< Put your azure media services REST api endpoint here. >>"
+    "AmsResourceGroup": "<< Put your azure media services account resource group name here. >>"
   }
 }

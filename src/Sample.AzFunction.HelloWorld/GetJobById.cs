@@ -2,7 +2,6 @@
 using System.IO;
 using System.Threading.Tasks;
 using System.Web;
-using Azure.Core;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
@@ -10,6 +9,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using RestSharp;
 using RestSharp.Authenticators;
@@ -34,39 +34,42 @@ namespace Sample.AzFunction.HelloWorld
     /// </summary>
     public class GetJobById
     {
-        private readonly IConfiguration _configuration;
-        private readonly TokenCredential _tokenCredential;
+        private const string AmsRestApiResource = "https://rest.media.azure.net";
+        private readonly ILogger<GetJobById> _log;
 
-        private readonly IRestClient _restClient;
+        private readonly string _armAmsAccoutGetPath;
+        private readonly string _armManagementUrl;
+        private readonly object configLock = new object();
+        private bool isConfigured = false;
+
+        private IRestClient _restClient;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GetJobById"/> class.
         /// </summary>
+        /// <param name="log">The injected <see cref="ILogger"/>.</param>
         /// <param name="configuration">The injected <see cref="IConfiguration"/>.</param>
-        /// <param name="tokenCredential">The injected <see cref="TokenCredential"/>.</param>
         public GetJobById(
-            IConfiguration configuration,
-            TokenCredential tokenCredential)
+            ILogger<GetJobById> log,
+            IConfiguration configuration)
         {
-            _configuration = configuration;
-            _tokenCredential = tokenCredential;
+            _log = log ?? throw new ArgumentNullException(nameof(log));
 
+            var azureSubscriptionId = configuration.GetValue<string>("AZURE_SUBSCRIPTION_ID") ?? throw new Exception("'AZURE_SUBSCRIPTION_ID' app setting is required.");
+            _armManagementUrl = configuration.GetValue<string>("ArmManagementUrl") ?? throw new Exception("'ArmManagementUrl' app setting is required.");
             var amsAccountName = configuration.GetValue<string>("AmsAccountName") ?? throw new Exception("'AmsAccountName' app setting is required.");
-            var amsLocation = configuration.GetValue<string>("AmsLocation") ?? throw new Exception("'AmsLocation' app setting is required.");
-            var baseUrl = configuration.GetValue<string>("AmsRestApiEndpoint") ?? throw new Exception("'AmsRestApiEndpoint' app setting is required.");
-            _restClient = new RestClient(baseUrl);
+            var amsResourceGroup = configuration.GetValue<string>("AmsResourceGroup") ?? throw new Exception("'AmsResourceGroup' app setting is required.");
+            _armAmsAccoutGetPath = $"/subscriptions/{azureSubscriptionId}/resourceGroups/{amsResourceGroup}/providers/microsoft.media/mediaservices/{amsAccountName}?api-version=2015-10-01";
         }
 
         /// <summary>
         /// Gets the JobState using the jobId.
         /// </summary>
         /// <param name="req">HttpRequest.</param>
-        /// <param name="log">ILogger.</param>
         /// <returns>The Job REST response, ref: https://docs.microsoft.com/en-us/rest/api/media/operations/job#job_entity_properties.</returns>
         [FunctionName("GetJobById")]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req,
-            ILogger log)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req)
         {
             // Try to get the jobId from the request parameters:
             string jobId = req?.Query["id"];
@@ -83,7 +86,7 @@ namespace Sample.AzFunction.HelloWorld
             if (string.IsNullOrWhiteSpace(jobId))
             {
                 var argumentMsg = $"Error in {nameof(GetJobById)}, job id must be in the body or as a query param.";
-                log.LogError(argumentMsg);
+                _log.LogError(argumentMsg);
                 return new BadRequestObjectResult(new { error = argumentMsg });
             }
 
@@ -108,11 +111,64 @@ namespace Sample.AzFunction.HelloWorld
             }
             catch (Exception e)
             {
-                log.LogError(e, $"Error in {nameof(GetJobById)} for {jobId}.");
+                _log.LogError(e, $"Error in {nameof(GetJobById)} for {jobId}.");
                 return new BadRequestObjectResult(new { error = e.Message });
             }
 
             return actionResult;
+        }
+
+        /// <summary>
+        /// Gets the AMS V2 API endpoint.
+        /// </summary>
+        /// <returns>The AMS V2 API endpoint.</returns>
+        private string GetAmsRestApiEndpoint()
+        {
+            string amsRestApiEndpoint;
+            try
+            {
+                // Create a rest client for access the Azure Resource Management API Endpoint:
+                var restManagementClient = new RestClient(_armManagementUrl);
+
+                // Acquire a token for arm.
+                // Ref: https://docs.microsoft.com/en-us/azure/app-service/overview-managed-identity?tabs=dotnet#asal
+                var azureServiceTokenProvider = new Microsoft.Azure.Services.AppAuthentication.AzureServiceTokenProvider();
+                string armAccessToken = azureServiceTokenProvider.GetAccessTokenAsync(_armManagementUrl).Result;
+
+                // Add the bearer authentication token to all requests:
+                restManagementClient.Authenticator = new JwtAuthenticator(armAccessToken);
+
+                // Enforce a known serializer:
+                restManagementClient.UseNewtonsoftJson(
+                    new Newtonsoft.Json.JsonSerializerSettings()
+                    {
+                        ContractResolver = new DefaultContractResolver(),
+                    });
+
+                // Add default headers
+                restManagementClient.AddDefaultHeader("Accept", $"{ContentType.Json};odata=verbose");
+                restManagementClient.AddDefaultHeader("Content-Type", ContentType.Json);
+
+                // GET ams account details:
+                var request = new RestRequest(_armAmsAccoutGetPath, Method.GET);
+                var restResponse = restManagementClient.Execute<JObject>(request);
+                if (!restResponse.IsSuccessful)
+                {
+                    string expMsg = "Failed to get ams account details.";
+                    throw new Exception(expMsg);
+                }
+
+                // Parse endpoint information from arm response.
+                amsRestApiEndpoint = (string)restResponse.Data.SelectToken("properties.apiEndpoints[0].endpoint");
+            }
+            catch (Exception e)
+            {
+                // Just log, let the caller catch the original exception:
+                _log.LogError(e, $"Failed in {nameof(GetAmsRestApiEndpoint)}.\nException.Message:\n{e.Message}\nInnerException.Message:\n{e.InnerException?.Message}");
+                throw;
+            }
+
+            return amsRestApiEndpoint;
         }
 
         /// <summary>
@@ -121,25 +177,54 @@ namespace Sample.AzFunction.HelloWorld
         /// </summary>
         private void ConfigureRestClient()
         {
-            var amsAccessToken = _tokenCredential.GetToken(
-                new TokenRequestContext(
-                    scopes: new[] { "https://rest.media.azure.net/.default" },
-                    parentRequestId: null),
-                default);
-
-            _restClient.Authenticator = new JwtAuthenticator(amsAccessToken.Token);
-
-            _restClient.UseNewtonsoftJson(
-                new Newtonsoft.Json.JsonSerializerSettings()
+            if (!isConfigured)
+            {
+                Exception exceptionInLock = null;
+                lock (configLock)
                 {
-                    ContractResolver = new DefaultContractResolver(),
-                });
+                    if (!isConfigured)
+                    {
+                        try
+                        {
+                            string amsRestApiEndpoint = GetAmsRestApiEndpoint();
+                            _restClient = new RestClient(amsRestApiEndpoint);
 
-            _restClient.AddDefaultHeader("Content-Type", $"{ContentType.Json};odata=verbose");
-            _restClient.AddDefaultHeader("Accept", $"{ContentType.Json};odata=verbose");
-            _restClient.AddDefaultHeader("DataServiceVersion", "3.0");
-            _restClient.AddDefaultHeader("MaxDataServiceVersion", "3.0");
-            _restClient.AddDefaultHeader("x-ms-version", "2.19");
+                            // Acquire a token for AMS.
+                            // Ref: https://docs.microsoft.com/en-us/azure/app-service/overview-managed-identity?tabs=dotnet#asal
+                            var azureServiceTokenProvider = new Microsoft.Azure.Services.AppAuthentication.AzureServiceTokenProvider();
+                            string amsAccessToken = azureServiceTokenProvider.GetAccessTokenAsync(AmsRestApiResource).Result;
+
+                            _restClient.Authenticator = new JwtAuthenticator(amsAccessToken);
+
+                            _restClient.UseNewtonsoftJson(
+                                new Newtonsoft.Json.JsonSerializerSettings()
+                                {
+                                    ContractResolver = new DefaultContractResolver(),
+                                });
+
+                            _restClient.AddDefaultHeader("Content-Type", $"{ContentType.Json};odata=verbose");
+                            _restClient.AddDefaultHeader("Accept", $"{ContentType.Json};odata=verbose");
+                            _restClient.AddDefaultHeader("DataServiceVersion", "3.0");
+                            _restClient.AddDefaultHeader("MaxDataServiceVersion", "3.0");
+                            _restClient.AddDefaultHeader("x-ms-version", "2.19");
+                        }
+                        catch (Exception e)
+                        {
+                            exceptionInLock = e;
+                            _log.LogError(e, $"Failed in {nameof(ConfigureRestClient)}.\nException.Message:\n{e.Message}\nInnerException.Message:\n{e.InnerException?.Message}");
+                        }
+                        finally
+                        {
+                            isConfigured = true;
+                        }
+                    }
+                }
+
+                if (exceptionInLock != null)
+                {
+                    throw exceptionInLock;
+                }
+            }
 
             return;
         }

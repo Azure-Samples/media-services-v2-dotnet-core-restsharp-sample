@@ -127,5 +127,11 @@ namespace MediaServicesV2.Library.RestSharp
         /// <param name="assetId">assetId.</param>
         /// <returns>void Task.</returns>
         Task DeleteAssetAsync(string assetId);
+
+        /// <summary>
+        /// Gets the AMS V2 API endpoint.
+        /// </summary>
+        /// <returns>The AMS V2 API endpoint.</returns>
+        string GetAmsRestApiEndpoint();
     }
 }

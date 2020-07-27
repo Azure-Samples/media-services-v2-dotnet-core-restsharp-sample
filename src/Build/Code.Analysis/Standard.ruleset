@@ -5,6 +5,7 @@
     <Rule Id="CA1031" Action="None" />
     <Rule Id="CA1303" Action="None" />
     <Rule Id="CA1307" Action="None" />
+    <Rule Id="CA1308" Action="None" />
   </Rules>
   <Rules AnalyzerId="Microsoft.CodeQuality.CSharp.Analyzers" RuleNamespace="Microsoft.CodeQuality.CSharp.Analyzers">
     <Rule Id="CA1032" Action="None" />
