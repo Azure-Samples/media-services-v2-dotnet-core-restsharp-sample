@@ -72,7 +72,8 @@ namespace MediaServicesV2.Services.Encoding.Services.Media
                     var sourceUriBuilder = new BlobUriBuilder(fileToCopy);
                     var destUriBuilder = new BlobUriBuilder(assetUri)
                     {
-                        BlobName = sourceUriBuilder.BlobName,
+                        // we need to remove subfolders if any, as AMS v2 does not support subfolder(s) in an asset container
+                        BlobName = sourceUriBuilder.BlobName.Split('/').Last(),
                     };
                     var exists = await _storageService.BlobExistsAsync(fileToCopy).ConfigureAwait(false);
                     if (!exists)
