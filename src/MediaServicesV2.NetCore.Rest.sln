@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		..\infrastructure\azure-pipelines\templates\steps\build-test-report-steps-template.yml = ..\infrastructure\azure-pipelines\templates\steps\build-test-report-steps-template.yml
-		..\infrastructure\azure-pipelines\hardac_functions_pr_master.yml = ..\infrastructure\azure-pipelines\hardac_functions_pr_master.yml
+		..\infrastructure\azure-pipelines\pr_master.yml = ..\infrastructure\azure-pipelines\pr_master.yml
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
